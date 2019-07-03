@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string           not null
+#
+
 class User < ApplicationRecord
     attr_reader :password
 
@@ -7,7 +20,9 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    #ASSOCIATIONS HERE
+    has_many :tickets,
+        foreign_key: :owner_id,
+        class_name: :Ticket
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
