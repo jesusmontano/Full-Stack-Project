@@ -13,7 +13,7 @@ import {
 const App = () => (
     <div>
         <header>
-            <h1>Welcome to SeatNerd.</h1>
+            <h1>SeatNerd under construction...</h1>
             <GreetingContainer />
         </header>
 
