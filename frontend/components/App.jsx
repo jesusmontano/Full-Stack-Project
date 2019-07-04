@@ -15,14 +15,19 @@ const App = () => (
     <div>
         <header>
             <h1>SeatNerd</h1>
+            <img src="logo.jpg" alt=""/>
             <GreetingContainer />
         </header>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         <div>
+            <img src="cheering_fan.jpg" alt=""/>
             <h3>Life's an event.</h3>
             <h3>We have the tickets.</h3>
         </div>
+        <footer>
+            Jesus Montano
+        </footer>
     </div>
 );
 
