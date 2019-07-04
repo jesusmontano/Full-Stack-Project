@@ -22,6 +22,6 @@ class Event < ApplicationRecord
         class_name: :Team
     
     belongs_to :venue,
-        foreign_key: :venue_id
+        foreign_key: :venue_id,
         class_name: :Venue
 end
