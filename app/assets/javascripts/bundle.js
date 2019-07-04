@@ -189,10 +189,14 @@ var App = function App() {
     exact: true,
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "cheering_fan.jpg",
     alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "We have the tickets.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, "Jesus Montano"));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "intro"
+  }, "Life's an event. We have the tickets.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, "Jesus Montano"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
