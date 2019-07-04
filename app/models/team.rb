@@ -13,7 +13,7 @@ class Team < ApplicationRecord
         foreign_key: :home_team_id,
         class_name: :Event
 
-    has_many :away_events
+    has_many :away_events,
         foreign_key: :away_team_id,
         class_name: :Event
 end

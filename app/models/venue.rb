@@ -12,6 +12,6 @@
 
 class Venue < ApplicationRecord
     has_many :events,
-        foreign_key: :venue_id
+        foreign_key: :venue_id,
         class_name: :Event
 end
