@@ -331,16 +331,19 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'Login to SeatNerd',
+    formType: 'Login',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/signup"
-    }, "sign up instead")
+    }, "Register here")
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
+    },
+    demoUser: function demoUser(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
     }
   };
@@ -401,6 +404,7 @@ function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleGuestSubmit = _this.handleGuestSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -419,6 +423,20 @@ function (_React$Component) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
       this.props.processForm(user);
+    }
+  }, {
+    key: "handleGuestSubmit",
+    value: function handleGuestSubmit(e) {
+      var _this3 = this;
+
+      e.preventDefault();
+      this.props.demoUser({
+        email: 'demo@user.com',
+        username: 'demouser',
+        password: 'password'
+      }).then(function () {
+        return _this3.props.history.push("/");
+      });
     }
   }, {
     key: "renderErrors",
@@ -458,7 +476,9 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleGuestSubmit
+      }, "Login as demo user"))));
     }
   }]);
 
@@ -494,10 +514,10 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'Sign up with Email',
+    formType: 'Sign up',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/login"
-    }, "log in instead")
+    }, "Log in here")
   };
 };
 
@@ -505,6 +525,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["signup"])(user));
+    },
+    demoUser: function demoUser(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
     }
   };
 };
