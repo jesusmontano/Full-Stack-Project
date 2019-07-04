@@ -15,7 +15,6 @@ const App = () => (
     <div>
         <header>
             <h1>SeatNerd</h1>
-            <img src="logo.jpg" alt=""/>
             <GreetingContainer />
         </header>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
