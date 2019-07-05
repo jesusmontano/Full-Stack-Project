@@ -16,7 +16,10 @@ const App = () => (
     <div>
         <Modal />
         <header>
-            <h1>SeatNerd</h1>
+            <div className="logo-and-title">
+                <img className="seatgeek-logo" src="seatgeek_logo.png" alt=""/>
+                <h1>SeatNerd</h1>
+            </div>
             <GreetingContainer />
         </header>
         <AuthRoute exact path="/login" component={LogInFormContainer} />

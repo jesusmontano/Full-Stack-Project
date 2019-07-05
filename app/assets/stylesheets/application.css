@@ -15,12 +15,22 @@
  */
 
 div {
- font-family: Gilroy, "Helvetica Neue", Arial, Helvetica, sans-serif;
+ font-family: proxima-nova,Proxima Nova,Arial,Helvetica,sans-serif
 }
 
 h1 {
     color: white;
     font-size: 40px;
+}
+
+.logo-and-title {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.seatgeek-logo {
+  height: 50px;
 }
 
  header {
@@ -29,6 +39,7 @@ h1 {
      display: flex;
      font-weight: bold;
      justify-content: space-between;
+     align-items: center;
  }
 
  .home {

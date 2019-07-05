@@ -27,7 +27,8 @@ class SessionForm extends React.Component {
 
     handleGuestSubmit(e) {
         e.preventDefault();
-        this.props.demoUser({email: 'demo@user.com', username: 'demouser', password: 'password'}).then(() => this.props.history.push("/"));
+        this.props.demoUser({email: 'demo@user.com', username: 'demouser', password: 'password'}).then(() => this.props.history.push("/"))
+            .then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -47,8 +48,9 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Welcome to SeatNerd!
-          <br />
-                    {this.props.opposingFormType} {this.props.navLink}
+                <br />
+                    Please {this.props.formType} or {this.props.otherForm}
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
