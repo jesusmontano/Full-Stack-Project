@@ -16,18 +16,21 @@ const App = () => (
     <div>
         <Modal />
         <header>
-            <div className="logo-and-title">
-                <img className="seatgeek-logo" src="seatgeek_logo.png" alt=""/>
-                <h1>SeatNerd</h1>
+            <div className="navbar">
+                <div className="logo-and-title">
+                    <img className="seatgeek-logo" src="seatgeek_logo.png" alt="" />
+                    <h1 className="seatnerd-text">SeatNerd</h1>
+                </div>
+                <GreetingContainer />
             </div>
-            <GreetingContainer />
+            <div className="intro-splash-tagline">
+                <p>Life's an event.</p>
+                <p>We have the tickets.</p>
+            </div>
         </header>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        <div className="home">
-            <img src="cheering_fan.jpg" alt=""/>
-            <div className="intro">Life's an event. We have the tickets.</div>
-        </div>
+        
     </div>
 );
 
