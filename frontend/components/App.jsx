@@ -28,9 +28,6 @@ const App = () => (
             <img src="cheering_fan.jpg" alt=""/>
             <div className="intro">Life's an event. We have the tickets.</div>
         </div>
-        <footer>
-            Jesus Montano
-        </footer>
     </div>
 );
 

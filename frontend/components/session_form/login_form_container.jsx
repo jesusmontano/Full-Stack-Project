@@ -8,7 +8,7 @@ import SessionFormLogin from './session_form_login';
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
-        formType: 'login',
+        formType: 'Login',
         opposingFormType: 'Need a SeatNerd account?'
     };
 };
