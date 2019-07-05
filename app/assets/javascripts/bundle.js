@@ -229,7 +229,19 @@ var App = function App() {
     exact: true,
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/jesus-montano-795311138/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "linkedin-logo",
+    src: "https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/jesusmontano"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "linkedin-logo",
+    src: "https://image.flaticon.com/icons/png/128/25/25231.png",
+    alt: ""
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -262,12 +274,12 @@ var Greeting = function Greeting(_ref) {
       onClick: function onClick() {
         return openModal('login');
       }
-    }, "Login"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Log In"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "signup-button",
       onClick: function onClick() {
         return openModal('signup');
       }
-    }, "Signup"));
+    }, "Sign Up"));
   };
 
   var personalGreeting = function personalGreeting() {

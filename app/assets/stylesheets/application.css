@@ -53,7 +53,8 @@ div {
      padding-top: 140px;*/
     height: 440px;
     background-image: url(https://seatgeek.com/assets/homepage/header@1280.jpg), linear-gradient(90deg, rgb(213, 115, 106) 0%, rgb(207, 129, 85) 56%, rgb(114, 55, 42) 100%);
- }
+    background-size: cover;
+  }
 
  .modal-background {
   position: fixed;
@@ -143,22 +144,36 @@ div {
   background: transparent;
   color: white;
   border: transparent;
+  letter-spacing: .02em;
+  font-weight: lighter;
 }
 
 .signup-button {
   background: #00000033;
   color: white;
   border: transparent;
+  letter-spacing: .02em;
+  font-weight: lighter;
 }
 
 .login-button:hover {
   background-color: white;
   color: #1673e6;
-  transition-duration: 0.6s;
+  transition-duration: .6s;
 }
 
 .signup-button:hover {
   background-color: white;
   color: #1673e6;
-  transition-duration: 0.6s;
+  transition-duration: .6s;
+}
+
+.linkedin-logo {
+  height: 30px;
+}
+
+footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
 }

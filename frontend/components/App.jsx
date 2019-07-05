@@ -30,7 +30,14 @@ const App = () => (
         </header>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        
+        <footer>
+            <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
+                <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
+            </a>
+            <a href="https://github.com/jesusmontano">
+                <img className="linkedin-logo" src="https://image.flaticon.com/icons/png/128/25/25231.png" alt="" />
+            </a>
+        </footer>
     </div>
 );
 
