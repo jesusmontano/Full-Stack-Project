@@ -21,6 +21,7 @@ div {
 h1 {
     color: white;
     font-size: 40px;
+    font-family: Gilroy, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 .logo-and-title {
@@ -48,6 +49,8 @@ h1 {
      color: white;
      max-width: 100%;
      height: auto;
+     font-weight: 700;
+     font-family: Gilroy, "Helvetica Neue", Arial, Helvetica, sans-serif;
  }
 
  .intro {
@@ -102,4 +105,26 @@ h1 {
    padding: 20px;
    background: white;
    position: relative;
+   border-radius: .75em;
  }
+
+ button {
+   border-radius: 8px;
+   background: white;
+   font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+ }
+
+ button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.session-submit {
+  border-radius: 8px;
+   background: white;
+   font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+}
+
+.session-submit:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+

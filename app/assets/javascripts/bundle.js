@@ -262,7 +262,7 @@ var Greeting = function Greeting(_ref) {
       onClick: function onClick() {
         return openModal('login');
       }
-    }, "Login"), "\xA0or\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Login"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
         return openModal('signup');
       }
