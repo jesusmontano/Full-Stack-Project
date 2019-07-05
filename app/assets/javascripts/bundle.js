@@ -285,9 +285,7 @@ var Greeting = function Greeting(_ref) {
   var personalGreeting = function personalGreeting() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "header-group"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-      className: "header-name"
-    }, "Hi, ", currentUser.username, "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "header-button",
       onClick: logout
     }, "Log Out"));
@@ -635,7 +633,7 @@ function (_React$Component) {
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleGuestSubmit
-      }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Already have a SeatNerd account? ", this.props.otherForm, this.renderErrors())));
+      }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Already have a SeatNerd account? ", this.props.otherForm), this.renderErrors())));
     }
   }]);
 
@@ -775,7 +773,7 @@ function (_React$Component) {
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleGuestSubmit
-      }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Need a SeatNerd account? ", this.props.otherForm, this.renderErrors())));
+      }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Need a SeatNerd account? ", this.props.otherForm), this.renderErrors())));
     }
   }]);
 

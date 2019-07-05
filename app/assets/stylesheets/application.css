@@ -85,7 +85,15 @@ div {
  }
 
  .login-input {
-   width: 97%;
+   width: 94%;
+   height: 30px;
+    border-radius: 0.625rem;
+    border-style: solid;
+    border-color: gray;
+    border-image: initial;
+    outline: none;
+    border-width: thin;
+    padding-left: 0.9375rem;
  }
 
  .login-form-box {
@@ -121,10 +129,6 @@ div {
 .header-name {
   color: white;
   font-size: 19px;
-}
-
-.close-x {
-  font-weight: bold;
 }
 
 .intro-splash-tagline {
@@ -197,4 +201,20 @@ footer {
     text-overflow: ellipsis;
     color: rgb(31, 31, 31);
     letter-spacing: 0.0176rem;
+}
+
+.close-x {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: rgb(81, 82, 84);
+}
+
+.header-button {
+    background: #00000033;
+    color: white;
+    border: transparent;
+    letter-spacing: .02em;
+    font-weight: lighter;
 }
