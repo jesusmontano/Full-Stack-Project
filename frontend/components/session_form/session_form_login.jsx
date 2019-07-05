@@ -51,8 +51,8 @@ class SessionFormLogin extends React.Component {
                     <br/>
                     <p className="login-signup-prompt">Log in to SeatNerd</p>
                 <br />
-                    Please {this.props.formType} or {this.props.otherForm}
-                    {this.renderErrors()}
+                    {/* Please {this.props.formType} or {this.props.otherForm}
+                    {this.renderErrors()} */}
                     <div className="login-form">
                         <br />
                         <label className="login-signup-form-label">Username
@@ -63,9 +63,7 @@ class SessionFormLogin extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <br />
                         <label className="login-signup-form-label">Password
-                            <br/>
               <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
@@ -76,6 +74,9 @@ class SessionFormLogin extends React.Component {
                         <input className="session-submit" type="submit" value={this.props.formType} />
                         <br/>
                         <button onClick={this.handleGuestSubmit}>Login as demo user</button>
+                        <br/>
+                        Need a SeatNerd account? {this.props.otherForm}
+                        {this.renderErrors()}
                     </div>
                 </form>
             </div>

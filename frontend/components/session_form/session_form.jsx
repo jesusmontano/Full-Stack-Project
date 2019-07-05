@@ -51,8 +51,8 @@ class SessionForm extends React.Component {
                     <br/>
                     <p className="login-signup-prompt">Sign up for SeatNerd</p>
                 <br />
-                    Please {this.props.formType} or {this.props.otherForm}
-                    {this.renderErrors()}
+                    {/* Please {this.props.formType} or {this.props.otherForm}
+                    {this.renderErrors()} */}
                     <div className="login-form">
                         <br />
                         <label className="login-signup-form-label">Email Address
@@ -80,6 +80,9 @@ class SessionForm extends React.Component {
                         <input className="session-submit" type="submit" value={this.props.formType} />
                         <br/>
                         <button onClick={this.handleGuestSubmit}>Login as demo user</button>
+                        <br/>
+                        Already have a SeatNerd account? {this.props.otherForm}
+                        {this.renderErrors()}
                     </div>
                 </form>
             </div>
