@@ -119,6 +119,7 @@ h1 {
    background: white;
    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
    height: 35px;
+   cursor: pointer;
  }
 
  button:hover {
