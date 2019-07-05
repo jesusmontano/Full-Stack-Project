@@ -49,13 +49,13 @@ class SessionFormLogin extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     <br/>
-                    Log in to SeatNerd
+                    <p className="login-signup-prompt">Log in to SeatNerd</p>
                 <br />
                     Please {this.props.formType} or {this.props.otherForm}
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>Username
+                        <label className="login-signup-form-label">Username
                             <br/>
               <input type="text"
                                 value={this.state.username}
@@ -64,7 +64,7 @@ class SessionFormLogin extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>Password
+                        <label className="login-signup-form-label">Password
                             <br/>
               <input type="password"
                                 value={this.state.password}

@@ -89,7 +89,6 @@ div {
  }
 
  .login-form-box {
-   outline: 1px solid black;
    padding: 20px;
    background: white;
    position: relative;
@@ -115,7 +114,8 @@ div {
 }
 
 .session-submit:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: rgb(60, 90, 150);
+  border-color: rgb(60, 90, 150);
 }
 
 .header-name {
@@ -176,4 +176,25 @@ footer {
   padding-top: 20px;
   display: flex;
   justify-content: space-evenly;
+}
+
+.login-signup-form-label {
+  font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.57143em;
+    font-weight: 400;
+    color: rgb(81, 82, 84);
+    font-size: 0.875rem;
+    margin: 0px;
+    padding: 0px 0px 0.25rem;
+}
+
+.login-signup-prompt {
+  display: flex;
+    justify-content: center;
+    font-family: Gilroy, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.0625em;
+    text-overflow: ellipsis;
+    color: rgb(31, 31, 31);
+    letter-spacing: 0.0176rem;
 }
