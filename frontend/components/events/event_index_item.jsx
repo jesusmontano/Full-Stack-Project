@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 
 const EventIndexItem = ({ event }) => (
     <li>
-        {event.date}
-        {event.home_team_id} vs. {event.away_team_id} at {venue.id}
+        Date: {event.date}
+        <br/>
+        Home Team ID: {event.home_team_id} 
+        <br/>
+        vs. 
+        <br/>
+        {event.away_team_id} 
+        <br/>
+        Venue: {event.venue_id}
     </li>
 );
 
