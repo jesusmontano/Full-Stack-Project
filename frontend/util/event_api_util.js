@@ -10,4 +10,4 @@ export const fetchEvent = (id) => (
         method: 'get',
         url: `api/events/${id}`
     })
-)
+);
