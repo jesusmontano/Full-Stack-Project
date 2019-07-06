@@ -98,6 +98,12 @@ div {
     color: black;
  }
 
+ .login-input:focus {
+   outline: none;
+   border-color: #9ecaed;
+   box-shadow: 0 0 10px #9ecaed;
+ }
+
  .login-form-box {
    padding: 20px;
    background: white;
