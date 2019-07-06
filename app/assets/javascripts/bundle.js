@@ -637,7 +637,9 @@ function (_React$Component) {
         onClick: this.handleGuestSubmit
       }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "other-form-suggestion"
-      }, "Already have a SeatNerd account? ", this.props.otherForm), this.renderErrors())));
+      }, "Already have a SeatNerd account? ", this.props.otherForm), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "errors"
+      }, this.renderErrors()))));
     }
   }]);
 
@@ -780,7 +782,9 @@ function (_React$Component) {
         onClick: this.handleGuestSubmit
       }, "Login as demo user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "other-form-suggestion"
-      }, "Need a SeatNerd account? ", this.props.otherForm), this.renderErrors())));
+      }, "Need a SeatNerd account? ", this.props.otherForm), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "errors"
+      }, this.renderErrors()))));
     }
   }]);
 

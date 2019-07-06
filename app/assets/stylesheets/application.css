@@ -249,3 +249,10 @@ footer {
   background-color: rgb(213, 115, 106);
   transition-duration: .6s;
 }
+
+.errors {
+  font-size: smaller;
+  font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: red;
+  font-weight: bolder;
+}

@@ -78,7 +78,9 @@ class SessionFormLogin extends React.Component {
                         <div className="other-form-suggestion">
                             Need a SeatNerd account? {this.props.otherForm}
                         </div>
-                        {this.renderErrors()}
+                        <div className="errors">
+                            {this.renderErrors()}
+                        </div>
                     </div>
                 </form>
             </div>
