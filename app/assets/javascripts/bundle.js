@@ -768,7 +768,7 @@ function (_React$Component) {
       e.preventDefault();
       this.props.demoUser({
         email: 'demo@user.com',
-        username: 'demouser',
+        username: 'demo',
         password: 'password'
       }).then(function () {
         return _this3.props.history.push("/");
@@ -925,7 +925,7 @@ function (_React$Component) {
       e.preventDefault();
       this.props.demoUser({
         email: 'demo@user.com',
-        username: 'demouser',
+        username: 'demo',
         password: 'password'
       }).then(function () {
         return _this3.props.history.push("/");

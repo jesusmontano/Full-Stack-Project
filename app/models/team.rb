@@ -9,6 +9,8 @@
 #
 
 class Team < ApplicationRecord
+    validates :name, presence: true
+
     has_many :home_events,
         foreign_key: :home_team_id,
         class_name: :Event
