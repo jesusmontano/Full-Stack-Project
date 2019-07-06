@@ -24,6 +24,10 @@ class SessionFormLogin extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
+    componentWillMount() {
+        this.props.clearErrors();
+    }
+
 
     handleGuestSubmit(e) {
         e.preventDefault();

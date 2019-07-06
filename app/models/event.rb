@@ -13,6 +13,9 @@
 #
 
 class Event < ApplicationRecord
+
+    validates :date, :home_team_id, :away_team_id, :venue_id, :sport, presence: true
+
     belongs_to :home_team,
         foreign_key: :home_team_id,
         class_name: :Team
