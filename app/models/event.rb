@@ -24,4 +24,8 @@ class Event < ApplicationRecord
     belongs_to :venue,
         foreign_key: :venue_id,
         class_name: :Venue
+
+    has_many :tickets,
+        foreign_key: :event_id,
+        class_name: :Ticket
 end
