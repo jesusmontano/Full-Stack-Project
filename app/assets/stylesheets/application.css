@@ -94,6 +94,8 @@ div {
     outline: none;
     border-width: thin;
     padding-left: 0.9375rem;
+    font-size: medium;
+    color: black;
  }
 
  .login-form-box {
@@ -124,6 +126,7 @@ div {
 .session-submit:hover {
   background-color: rgb(60, 90, 150);
   border-color: rgb(60, 90, 150);
+  cursor: pointer;
 }
 
 .header-name {
@@ -217,4 +220,32 @@ footer {
     border: transparent;
     letter-spacing: .02em;
     font-weight: lighter;
+}
+
+.other-form-suggestion {
+    font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.57143em;
+    font-weight: 400;
+    color: rgb(81, 82, 84);
+    font-size: 0.775rem;
+}
+
+.other-form-link {
+  font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.57143em;
+    font-weight: 400;
+    color: #1673e6;
+    font-size: 0.775rem;
+    border: none;
+}
+
+.demo-user-button {
+  background: lightskyblue;
+  color: white;
+  border: none;
+}
+
+.demo-user-button:hover {
+  background-color: rgb(213, 115, 106);
+  transition-duration: .6s;
 }
