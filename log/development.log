@@ -13875,3 +13875,10 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 398ms (Views: 386.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-06 13:07:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 720ms (Views: 707.5ms | ActiveRecord: 0.0ms)
+
+
