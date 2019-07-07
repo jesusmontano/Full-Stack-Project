@@ -271,6 +271,46 @@ var requestTeam = function requestTeam(id) {
 
 /***/ }),
 
+/***/ "./frontend/actions/venue_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/venue_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_VENUES, RECEIVE_VENUE, requestVenues, requestVenue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_VENUES", function() { return RECEIVE_VENUES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_VENUE", function() { return RECEIVE_VENUE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestVenues", function() { return requestVenues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestVenue", function() { return requestVenue; });
+/* harmony import */ var _util_venue_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/venue_api_util */ "./frontend/util/venue_api_util.js");
+
+var RECEIVE_VENUES = 'RECEIVE_VENUES';
+var RECEIVE_VENUE = 'RECEIVE_VENUE';
+var requestVenues = function requestVenues() {
+  return function (dispatch) {
+    return _util_venue_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVenues"]().then(function (venues) {
+      return dispatch({
+        type: RECEIVE_VENUES,
+        venues: venues
+      });
+    });
+  };
+};
+var requestVenue = function requestVenue(id) {
+  return function (dispatch) {
+    return _util_venue_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVenue"](id).then(function (venue) {
+      return dispatch({
+        type: RECEIVE_VENUE,
+        venue: venue
+      });
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/App.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/App.jsx ***!
@@ -1311,6 +1351,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 /* harmony import */ var _events_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./events_reducer */ "./frontend/reducers/events_reducer.js");
 /* harmony import */ var _teams_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./teams_reducer */ "./frontend/reducers/teams_reducer.js");
+/* harmony import */ var _venues_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./venues_reducer */ "./frontend/reducers/venues_reducer.js");
+
 
 
 
@@ -1318,7 +1360,8 @@ __webpack_require__.r(__webpack_exports__);
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   events: _events_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  teams: _teams_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  teams: _teams_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  venues: _venues_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1605,6 +1648,44 @@ var usersReducer = function usersReducer() {
 
 /***/ }),
 
+/***/ "./frontend/reducers/venues_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/venues_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_venue_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/venue_actions */ "./frontend/actions/venue_actions.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_1__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var venuesReducer = function venuesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_venue_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VENUES"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, action.venues);
+
+    case _actions_venue_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VENUE"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.venue.id, action.venue));
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (venuesReducer);
+
+/***/ }),
+
 /***/ "./frontend/seatnerd.jsx":
 /*!*******************************!*\
   !*** ./frontend/seatnerd.jsx ***!
@@ -1819,6 +1900,32 @@ var fetchTeam = function fetchTeam(id) {
   return $.ajax({
     method: 'get',
     url: "api/teams/".concat(id)
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/venue_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/venue_api_util.js ***!
+  \*****************************************/
+/*! exports provided: fetchVenues, fetchVenue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVenues", function() { return fetchVenues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVenue", function() { return fetchVenue; });
+var fetchVenues = function fetchVenues() {
+  return $.ajax({
+    method: 'get',
+    url: 'api/venues'
+  });
+};
+var fetchVenue = function fetchVenue(id) {
+  return $.ajax({
+    method: 'get',
+    url: "api/venues/".concat(id)
   });
 };
 

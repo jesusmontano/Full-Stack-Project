@@ -22932,3 +22932,48 @@ Processing by Api::EventsController#index as JSON
 Completed 200 OK in 62ms (Views: 26.7ms | ActiveRecord: 33.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-07 14:35:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 328ms (Views: 320.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-07 14:36:00 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (24.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/index.json.jbuilder (37.6ms)
+Completed 200 OK in 56ms (Views: 30.5ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-07 14:36:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 324ms (Views: 318.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-07 14:40:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 1286ms (Views: 1282.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-07 14:41:03 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (33.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.0ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (45.3ms)
+Completed 200 OK in 60ms (Views: 26.0ms | ActiveRecord: 33.0ms)
+
+
