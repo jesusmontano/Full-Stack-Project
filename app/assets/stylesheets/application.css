@@ -271,3 +271,9 @@ footer {
 .events-list {
   column-count: 3;
 }
+
+.left-side-of-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

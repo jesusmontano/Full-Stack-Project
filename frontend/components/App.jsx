@@ -20,9 +20,13 @@ const App = () => (
         <Modal />
         <header>
             <div className="navbar">
-                <div className="logo-and-title">
-                    <img className="seatgeek-logo" src="seatgeek_logo.png" alt="" />
-                    <h1 className="seatnerd-text">SeatNerd</h1>
+                <div className="left-side-of-nav-bar">
+                    <div className="logo-and-title">
+                        <img className="seatgeek-logo" src="seatgeek_logo.png" alt="" />
+                        <h1 className="seatnerd-text">SeatNerd</h1>
+                    </div>
+                    <button><Link to={"/teams"}>Teams</Link></button>
+                    <button><Link to={"/events"}>Events</Link></button>
                 </div>
                 <GreetingContainer />
             </div>
