@@ -10,7 +10,8 @@ class EventIndex extends React.Component {
     render() {
         return (
             <div>
-                <ul>
+                Events
+                <ul className="events-list">
                     {this.props.events.map(event => (
                         <EventIndexItem event={event} key={event.id} />
                     ))}

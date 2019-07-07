@@ -56,6 +56,11 @@ div {
     background-size: cover;
   }
 
+  .splash {
+    background-image: url(https://seatgeek.com/assets/homepage/header@1280.jpg), linear-gradient(90deg, rgb(213, 115, 106) 0%, rgb(207, 129, 85) 56%, rgb(114, 55, 42) 100%);
+    background-size: cover;
+  }
+
  .modal-background {
   position: fixed;
   top: 0;
@@ -261,4 +266,8 @@ footer {
   font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: red;
   font-weight: bolder;
+}
+
+.events-list {
+  column-count: 3;
 }

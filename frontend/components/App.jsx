@@ -3,6 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import EventIndexContainer from './events/event_index_container';
+import Splash from './splash/splash'
 import {
     Route,
     Redirect,
