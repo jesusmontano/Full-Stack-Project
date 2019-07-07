@@ -1152,7 +1152,9 @@ var Splash = function Splash() {
     }
   }, "Events")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "index-button"
-  }, "Venues"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Venues"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-splash-tagline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets.")));
 };
