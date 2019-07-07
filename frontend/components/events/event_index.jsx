@@ -11,7 +11,7 @@ class EventIndex extends React.Component {
         return (
             <div>
                 <label className="events-index-label">
-                    Upcoming Events
+                    Upcoming Games
                 </label>
                 <ul className="events-list">
                     {this.props.events.map(event => (

@@ -56,8 +56,8 @@ div {
     background-size: cover;
   }
 
-  .splash {
-    background-image: url(https://seatgeek.com/assets/homepage/header@1280.jpg), linear-gradient(90deg, rgb(213, 115, 106) 0%, rgb(207, 129, 85) 56%, rgb(114, 55, 42) 100%);
+  .splash-test {
+    background-image: url(https://seatgeek.com/assets/category-headers/desktop/nba.jpg);
     background-size: cover;
   }
 
@@ -269,7 +269,8 @@ footer {
 }
 
 .events-list {
-
+  margin-left: 12%;
+    margin-bottom: 30px;
 }
 
 .left-side-of-nav-bar {
@@ -307,11 +308,11 @@ footer {
 .team-index-item-buttons {
     margin-top: 20px;
     width: 60%;
-    background: rgb(213, 115, 106);
+    background: #1673e6;
     color: white;
     border: none;
     letter-spacing: .02em;
-    font-weight: normal;
+    font-weight: lighter;
     text-align: left;
     text-indent: 5%;
     margin-bottom: 15px;
@@ -339,6 +340,43 @@ footer {
 .event-index-item-div {
   display: flex;
     justify-content: space-between;
-  outline: 2px dashed blue;
   border-radius: .75rem;
+}
+
+.event-button {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    background:white;
+    border: none;
+    letter-spacing: .02em;
+    font-weight: lighter;
+    text-align: left;
+    text-indent: 5%;
+    margin-bottom: 15px;
+    font-size: 0.9375em;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: rgb(81, 82, 84);
+    border-radius: .75rem;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.event-button:hover {
+  transition-duration: .4s;
+  box-shadow: 5px 10px 18px -10px #888888;
+  color: #1673e6;
+}
+
+.buy-button {
+  border-radius: 8px;
+    background: #1673e6;
+    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    width: 55px;
+    outline: none;
+    font-weight: normal;
 }

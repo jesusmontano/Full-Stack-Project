@@ -303,41 +303,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "left-side-of-nav-bar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "logo-and-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "seatgeek-logo",
-    src: "seatgeek_logo.png",
-    alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "seatnerd-text"
-  }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "index-navbar-buttons"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "index-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    to: "/teams",
-    style: {
-      textDecoration: 'none',
-      color: 'white'
-    }
-  }, "Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "index-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    to: "/events",
-    style: {
-      textDecoration: 'none',
-      color: 'white'
-    }
-  }, "Events")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "index-button"
-  }, "Venues"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "intro-splash-tagline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+    exact: true,
+    path: "/test",
+    component: _splash_splash__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
     exact: true,
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -428,7 +398,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "events-index-label"
-      }, "Upcoming Events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, "Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "events-list"
       }, this.props.events.map(function (event) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_event_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -500,9 +470,11 @@ var EventIndexItem = function EventIndexItem(_ref) {
   var event = _ref.event;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "event-index-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "event-index-item-div"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Date: ", event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Home Team ID: ", event.home_team_id, "  vs. Away Team ID: ", event.away_team_id, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Venue ID: ", event.venue_id)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "event-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Home: ", event.home_team_id, "  vs. Away: ", event.away_team_id, " at: ", event.venue_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "buy-button"
+  }, "Buy")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventIndexItem);
@@ -1140,14 +1112,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "splash"
+    className: "splash-test"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navbar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "left-side-of-nav-bar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo-and-title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1156,7 +1132,27 @@ var Splash = function Splash() {
     alt: ""
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "seatnerd-text"
-  }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "index-navbar-buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/teams",
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/events",
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Events")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, "Venues"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-splash-tagline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets.")));
 };
