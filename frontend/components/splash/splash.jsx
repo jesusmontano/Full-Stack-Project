@@ -7,13 +7,13 @@ const Splash = () => (
         <div className="navbar">
             <div className="left-side-of-nav-bar">
                 <div className="logo-and-title">
-                    <img className="seatgeek-logo" src="seatgeek_logo.png" alt="" />
+                    <img className="seatgeek-logo" src="seatgeek_logo.png" alt=""/>
                     <h1 className="seatnerd-text">SeatNerd</h1>
                 </div>
                 <div className="index-navbar-buttons">
                     <button className="index-button"><Link to={"/teams"} style={{ textDecoration: 'none', color: 'white' }}>Teams</Link></button>
                     <button className="index-button"><Link to={"/events"} style={{ textDecoration: 'none', color: 'white' }}>Events</Link></button>
-                    <button className="index-button">Venues</button>
+                    <button className="index-button"><Link to={"/venues"} style={{ textDecoration: 'none', color: 'white' }}>Venues</Link></button>
                     <button className="index-button">Sell</button>
                 </div>
             </div>

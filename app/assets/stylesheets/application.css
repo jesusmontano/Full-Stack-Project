@@ -294,9 +294,8 @@ footer {
 }
 
 .index-button:hover {
-  background-color: white;
-  color: #1673e6;
-  transition-duration: .6s;
+  border: 1px solid white;
+  transition-duration: .3s;
 }
 
 .teams-list {
