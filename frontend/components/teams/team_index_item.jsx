@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const TeamIndexItem = ({ team }) => (
     <li>
-        Name: {team.name}
+        <button className="team-index-item-buttons">
+            {team.name}
+        </button>
+        <br/>
     </li>
 );
 

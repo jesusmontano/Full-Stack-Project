@@ -315,11 +315,27 @@ var App = function App() {
     alt: ""
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "seatnerd-text"
-  }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    to: "/teams"
-  }, "Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    to: "/events"
-  }, "Events"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "index-navbar-buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+    to: "/teams",
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+    to: "/events",
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Events")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "index-button"
+  }, "Venues"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-splash-tagline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
     exact: true,
@@ -410,7 +426,9 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Events", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "events-index-label"
+      }, "Upcoming Events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "events-list"
       }, this.props.events.map(function (event) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_event_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -480,7 +498,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var EventIndexItem = function EventIndexItem(_ref) {
   var event = _ref.event;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Date: ", event.date, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Home Team ID: ", event.home_team_id, "  vs. Away Team ID: ", event.away_team_id, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Venue ID: ", event.venue_id);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "event-index-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "event-index-item-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Date: ", event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Home Team ID: ", event.home_team_id, "  vs. Away Team ID: ", event.away_team_id, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Venue ID: ", event.venue_id)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventIndexItem);
@@ -1197,7 +1219,9 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Teams", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "teams-index-label"
+      }, "Teams"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "teams-list"
       }, this.props.teams.map(function (team) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_team_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1267,7 +1291,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var TeamIndexItem = function TeamIndexItem(_ref) {
   var team = _ref.team;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Name: ", team.name);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "team-index-item-buttons"
+  }, team.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TeamIndexItem);

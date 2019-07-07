@@ -10,7 +10,7 @@ class TeamIndex extends React.Component {
     render() {
         return (
             <div>
-                Teams
+                <label className="teams-index-label">Teams</label>
                 <ul className="teams-list">
                     {this.props.teams.map(team => (
                         <TeamIndexItem team={team} key={team.id} />
