@@ -231,6 +231,46 @@ var logout = function logout() {
 
 /***/ }),
 
+/***/ "./frontend/actions/team_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/team_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_TEAMS, RECEIVE_TEAM, requestTeams, requestTeam */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TEAMS", function() { return RECEIVE_TEAMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TEAM", function() { return RECEIVE_TEAM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestTeams", function() { return requestTeams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestTeam", function() { return requestTeam; });
+/* harmony import */ var _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/team_api_util */ "./frontend/util/team_api_util.js");
+
+var RECEIVE_TEAMS = 'RECEIVE_TEAMS';
+var RECEIVE_TEAM = 'RECEIVE_TEAM';
+var requestTeams = function requestTeams() {
+  return function (dispatch) {
+    return _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTeams"]().then(function (teams) {
+      return dispatch({
+        type: RECEIVE_TEAMS,
+        teams: teams
+      });
+    });
+  };
+};
+var requestTeam = function requestTeam(id) {
+  return function (dispatch) {
+    return _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTeam"](id).then(function (team) {
+      return dispatch({
+        type: RECEIVE_TEAM,
+        team: team
+      });
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/App.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/App.jsx ***!
@@ -1103,12 +1143,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 /* harmony import */ var _events_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./events_reducer */ "./frontend/reducers/events_reducer.js");
+/* harmony import */ var _teams_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./teams_reducer */ "./frontend/reducers/teams_reducer.js");
+
 
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  events: _events_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  events: _events_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  teams: _teams_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1300,6 +1343,44 @@ var sessionReducer = function sessionReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (sessionReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/teams_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/teams_reducer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/team_actions */ "./frontend/actions/team_actions.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_1__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var teamsReducer = function teamsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_team_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEAMS"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, action.teams);
+
+    case _actions_team_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEAM"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.team.id, action.team));
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (teamsReducer);
 
 /***/ }),
 
@@ -1545,6 +1626,32 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/team_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/team_api_util.js ***!
+  \****************************************/
+/*! exports provided: fetchTeams, fetchTeam */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTeams", function() { return fetchTeams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTeam", function() { return fetchTeam; });
+var fetchTeams = function fetchTeams() {
+  return $.ajax({
+    method: 'get',
+    url: 'api/teams'
+  });
+};
+var fetchTeam = function fetchTeam(id) {
+  return $.ajax({
+    method: 'get',
+    url: "api/teams/".concat(id)
   });
 };
 
