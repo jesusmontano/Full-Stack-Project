@@ -22977,3 +22977,29 @@ Processing by Api::EventsController#index as JSON
 Completed 200 OK in 60ms (Views: 26.0ms | ActiveRecord: 33.0ms)
 
 
+Started GET "/api/teams" for ::1 at 2019-07-07 14:52:59 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (54.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (2.4ms)
+  Rendered api/teams/_team.json.jbuilder (0.3ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.4ms)
+  Rendered api/teams/index.json.jbuilder (74.7ms)
+Completed 200 OK in 96ms (Views: 41.1ms | ActiveRecord: 54.5ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-07 14:52:59 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (16.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (30.6ms)
+Completed 200 OK in 46ms (Views: 29.1ms | ActiveRecord: 16.1ms)
+
+
