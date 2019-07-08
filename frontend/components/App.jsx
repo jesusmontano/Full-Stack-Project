@@ -7,7 +7,7 @@ import TeamIndexContainer from './teams/team_index_container';
 import VenueIndexContainer from './venues/venue_index_container';
 import TeamEventsIndexContainer from './teams/team_events_index_container';
 import Splash from './splash/splash'
-import TopTeams from './top_teams/top_teams';
+import TopTeamsContainer from './top_teams/top_teams_container';
 import {
     Route,
     Redirect,
@@ -22,7 +22,7 @@ const App = () => (
     <div>
         <Modal />
         <Splash />
-        <Route exact path="/" component={TopTeams}/>
+        <Route exact path="/" component={TopTeamsContainer}/>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         <Route exact path="/events" component={EventIndexContainer} />
