@@ -248,6 +248,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var RECEIVE_TEAMS = 'RECEIVE_TEAMS';
 var RECEIVE_TEAM = 'RECEIVE_TEAM';
+
+var receiveTeam = function receiveTeam(team) {
+  debugger;
+  return {
+    type: RECEIVE_TEAM,
+    team: team
+  };
+};
+
 var requestTeams = function requestTeams() {
   return function (dispatch) {
     return _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTeams"]().then(function (teams) {
@@ -260,11 +269,9 @@ var requestTeams = function requestTeams() {
 };
 var requestTeam = function requestTeam(id) {
   return function (dispatch) {
+    debugger;
     return _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTeam"](id).then(function (team) {
-      return dispatch({
-        type: RECEIVE_TEAM,
-        team: team
-      });
+      return dispatch(receiveTeam(team));
     });
   };
 };
@@ -330,9 +337,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _venues_venue_index_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./venues/venue_index_container */ "./frontend/components/venues/venue_index_container.jsx");
 /* harmony import */ var _teams_team_events_index_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./teams/team_events_index_container */ "./frontend/components/teams/team_events_index_container.jsx");
 /* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
-/* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
+/* harmony import */ var _top_teams_top_teams__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./top_teams/top_teams */ "./frontend/components/top_teams/top_teams.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+/* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
+
 
 
 
@@ -347,31 +356,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     exact: true,
-    path: "/test",
-    component: _splash_splash__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_10__["AuthRoute"], {
+    path: "/",
+    component: _top_teams_top_teams__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_11__["AuthRoute"], {
     exact: true,
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_10__["AuthRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_11__["AuthRoute"], {
     exact: true,
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     exact: true,
     path: "/events",
     component: _events_event_index_container__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     exact: true,
     path: "/teams",
     component: _teams_team_index_container__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     exact: true,
     path: "/venues",
     component: _venues_venue_index_container__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     exact: true,
     path: "/teams/:teamId",
     component: _teams_team_events_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -1273,11 +1282,19 @@ function (_React$Component) {
   _createClass(TeamEventsIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.requestTeam(this.props.match.params.teamId);
+      // this.props.requestTeam(this.props.match.params.teamId);
+      this.props.requestEvents();
     }
   }, {
     key: "render",
     value: function render() {
+      debugger;
+
+      if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
+        return null;
+      }
+
+      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "events-index-label"
       }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1310,11 +1327,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/team_actions */ "./frontend/actions/team_actions.js");
 /* harmony import */ var _team_events_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./team_events_index */ "./frontend/components/teams/team_events_index.jsx");
+/* harmony import */ var _actions_event_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/event_actions */ "./frontend/actions/event_actions.js");
+
 
 
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
+  debugger;
   var teamId = Number(ownProps.match.params.teamId);
   var team = state.entities.teams[teamId];
   var homeEvents = Object.values(state.entities.events).filter(function (event) {
@@ -1334,6 +1354,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     requestTeam: function requestTeam(id) {
       return dispatch(Object(_actions_team_actions__WEBPACK_IMPORTED_MODULE_1__["requestTeam"])(id));
+    },
+    requestEvents: function requestEvents() {
+      return dispatch(Object(_actions_event_actions__WEBPACK_IMPORTED_MODULE_3__["requestEvents"])());
     }
   };
 };
@@ -1512,6 +1535,43 @@ var TeamIndexItem = function TeamIndexItem(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TeamIndexItem);
+
+/***/ }),
+
+/***/ "./frontend/components/top_teams/top_teams.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/top_teams/top_teams.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var TopTeams = function TopTeams() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "top-teams-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "top-teams-label"
+  }, "Popular Teams"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "top-teams-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "top-teams-list-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Image here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/teams/13'
+  }, "Los Angeles Lakers"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "top-teams-list-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Image here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/teams/14'
+  }, "Golden State Warriors")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TopTeams);
 
 /***/ }),
 
@@ -1734,6 +1794,7 @@ var eventsReducer = function eventsReducer() {
 
   switch (action.type) {
     case _actions_event_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENTS"]:
+      debugger;
       return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, action.events);
 
     case _actions_event_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENT"]:
@@ -2105,6 +2166,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEvents", function() { return fetchEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEvent", function() { return fetchEvent; });
 var fetchEvents = function fetchEvents() {
+  debugger;
   return $.ajax({
     method: 'get',
     url: 'api/events'

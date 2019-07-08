@@ -428,3 +428,28 @@ footer {
   font-weight: 400;
   font-size: smaller;
 }
+
+.top-teams-label {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bolder;
+}
+
+.top-teams-list {
+  column-count: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-teams-div {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.top-teams-list-item {
+  border-radius: .75rem;
+  border: black solid 1px;
+  background: green;
+}
