@@ -32590,3 +32590,302 @@ Processing by Api::TeamsController#show as JSON
 Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/api/events" for ::1 at 2019-07-08 09:39:41 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (7.5ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/venues" for ::1 at 2019-07-08 09:39:42 -0700
+Processing by Api::VenuesController#index as JSON
+  Rendering api/venues/index.json.jbuilder
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/api/venues/index.json.jbuilder:1
+  Rendered api/venues/_venue.json.jbuilder (0.5ms)
+  Rendered api/venues/_venue.json.jbuilder (0.1ms)
+  Rendered api/venues/_venue.json.jbuilder (0.1ms)
+  Rendered api/venues/_venue.json.jbuilder (0.1ms)
+  Rendered api/venues/index.json.jbuilder (8.4ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-08 09:39:43 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (12.8ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:39:43 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.9ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/index.json.jbuilder (16.1ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/teams/15" for ::1 at 2019-07-08 09:39:49 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTeam Load (3.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.7ms)
+  Rendered api/teams/show.json.jbuilder (3.3ms)
+Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:39:51 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.8ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (13.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/teams/13" for ::1 at 2019-07-08 09:39:52 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.4ms)
+  Rendered api/teams/show.json.jbuilder (2.6ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:39:56 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.8ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (15.1ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-08 09:44:15 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (8.0ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:44:20 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.7ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.3ms)
+  Rendered api/teams/_team.json.jbuilder (0.3ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (17.4ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/teams/15" for ::1 at 2019-07-08 09:44:22 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTeam Load (4.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.6ms)
+  Rendered api/teams/show.json.jbuilder (3.3ms)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:44:24 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (1.0ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (13.9ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/teams/17" for ::1 at 2019-07-08 09:44:26 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (1.0ms)
+  Rendered api/teams/show.json.jbuilder (4.7ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:44:28 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.4ms)
+  Rendered api/teams/_team.json.jbuilder (0.0ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.0ms)
+  Rendered api/teams/_team.json.jbuilder (0.0ms)
+  Rendered api/teams/index.json.jbuilder (7.5ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/teams/14" for ::1 at 2019-07-08 09:44:30 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.7ms)
+  Rendered api/teams/show.json.jbuilder (3.9ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:44:32 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.6ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.3ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (14.4ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 09:45:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DjbrC58dlQJP-kzEM0iE6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 653ms (Views: 648.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:45:59 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.6ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.4ms)
+  Rendered api/teams/index.json.jbuilder (12.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/teams/13" for ::1 at 2019-07-08 09:46:04 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (8.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (2.9ms)
+  Rendered api/teams/show.json.jbuilder (5.7ms)
+Completed 200 OK in 31ms (Views: 20.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-08 09:46:06 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (8.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (16.8ms)
+Completed 200 OK in 34ms (Views: 25.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:46:07 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (0.8ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (10.6ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/teams/13" for ::1 at 2019-07-08 09:46:08 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.9ms)
+  Rendered api/teams/show.json.jbuilder (4.0ms)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/teams" for ::1 at 2019-07-08 09:46:12 -0700
+Processing by Api::TeamsController#index as JSON
+  Rendering api/teams/index.json.jbuilder
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/api/teams/index.json.jbuilder:1
+  Rendered api/teams/_team.json.jbuilder (1.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.2ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/_team.json.jbuilder (0.1ms)
+  Rendered api/teams/index.json.jbuilder (12.3ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/teams/14" for ::1 at 2019-07-08 09:46:15 -0700
+Processing by Api::TeamsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/teams_controller.rb:9
+  Rendering api/teams/show.json.jbuilder
+  Rendered api/teams/_team.json.jbuilder (0.7ms)
+  Rendered api/teams/show.json.jbuilder (2.9ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+

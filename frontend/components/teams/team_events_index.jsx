@@ -13,7 +13,7 @@ class TeamEventsIndex extends React.Component {
                     {this.props.team.name} Upcoming Games
                 </label>
                 <ul className="events-list">
-                    {this.props.homeEvents.map(event => (
+                    {this.props.homeEvents.concat(this.props.awayEvents).map(event => (
                         <TeamEventsIndexItem event={event} key={event.id} />
                     ))}
                 </ul>

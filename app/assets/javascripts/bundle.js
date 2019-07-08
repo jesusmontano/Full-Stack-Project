@@ -1282,7 +1282,7 @@ function (_React$Component) {
         className: "events-index-label"
       }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "events-list"
-      }, this.props.homeEvents.map(function (event) {
+      }, this.props.homeEvents.concat(this.props.awayEvents).map(function (event) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_team_events_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           event: event,
           key: event.id
