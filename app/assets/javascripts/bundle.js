@@ -516,11 +516,13 @@ var EventIndexItem = function EventIndexItem(_ref) {
   var event = _ref.event;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "event-index-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "event-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "event-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "event-information"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "event-date"
-  }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Home: ", event.home_team_id, "  vs. Away: ", event.away_team_id, " at: ", event.venue_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, "See Tickets")));
 };
