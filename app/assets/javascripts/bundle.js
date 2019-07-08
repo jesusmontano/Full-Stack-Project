@@ -543,7 +543,13 @@ var EventIndexItem = function EventIndexItem(_ref) {
     className: "event-date"
   }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
-  }, "See Tickets")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/',
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "See Tickets"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventIndexItem);
@@ -1378,6 +1384,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 var TeamEventsIndexItem = function TeamEventsIndexItem(_ref) {
@@ -1392,7 +1400,13 @@ var TeamEventsIndexItem = function TeamEventsIndexItem(_ref) {
     className: "event-date"
   }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
-  }, "See Tickets")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/',
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "See Tickets"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TeamEventsIndexItem);
@@ -1819,6 +1833,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 var VenueEventsIndexItem = function VenueEventsIndexItem(_ref) {
@@ -1833,7 +1849,13 @@ var VenueEventsIndexItem = function VenueEventsIndexItem(_ref) {
     className: "event-date"
   }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
-  }, "See Tickets")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/',
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "See Tickets"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (VenueEventsIndexItem);

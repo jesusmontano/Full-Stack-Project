@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const VenueEventsIndexItem = ({ event }) => (
     <li className="event-index-item">
@@ -12,8 +13,8 @@ const VenueEventsIndexItem = ({ event }) => (
                 </p>
             </div>
             <button className="buy-button">
-                See Tickets
-                </button>
+                <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
+            </button>
         </div>
     </li>
 );

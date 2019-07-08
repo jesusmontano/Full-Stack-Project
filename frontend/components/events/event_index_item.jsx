@@ -13,7 +13,7 @@ const EventIndexItem = ({ event }) => (
                     </p>
                 </div>
                 <button className="buy-button">
-                    See Tickets
+                    <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
                 </button>
             </div>
     </li>
