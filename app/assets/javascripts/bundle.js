@@ -1745,7 +1745,7 @@ function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "events-index-label"
-      }, this.props.venue.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, "Upcoming Games at ", this.props.venue.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "events-list"
       }, this.props.events.map(function (event) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_venue_events_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1971,6 +1971,7 @@ var VenueIndexItem = function VenueIndexItem(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "venue-index-item-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "venues/".concat(venue.id),
     style: {
       textDecoration: 'none',
       color: 'rgb(81, 82, 84)'
