@@ -5,6 +5,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import EventIndexContainer from './events/event_index_container';
 import TeamIndexContainer from './teams/team_index_container';
 import VenueIndexContainer from './venues/venue_index_container';
+import TeamEventsIndexContainer from './teams/team_events_index_container';
 import Splash from './splash/splash'
 import {
     Route,
@@ -26,6 +27,7 @@ const App = () => (
         <Route exact path="/events" component={EventIndexContainer} />
         <Route exact path="/teams" component={TeamIndexContainer} />
         <Route exact path="/venues" component={VenueIndexContainer} />
+        <Route exact path="/teams/:teamId" component={TeamEventsIndexContainer} />
         <footer>
             <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
                 <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
