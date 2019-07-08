@@ -14,6 +14,8 @@
 #
 
 class Ticket < ApplicationRecord
+    validates :owner_id, :venue_id, :event_id, :price, :row, :section, presence: true
+
     belongs_to :owner,
         foreign_key: :owner_id,
         class_name: :User
