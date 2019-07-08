@@ -8,11 +8,17 @@ class TeamEventsIndex extends React.Component {
     }
 
     render() {
-        debugger;
         if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
-            return null;
+            return (
+                <div>
+                    <label className="events-index-label">
+                        {this.props.team.name} Upcoming Games
+                </label>
+                    <h3>Bummer! Looks like there aren't any events.</h3>
+                    <p>Check back another time.</p>
+                </div>
+            )
         }
-        debugger;
         return (
             <div>
                 <label className="events-index-label">

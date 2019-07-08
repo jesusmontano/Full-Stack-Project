@@ -250,7 +250,6 @@ var RECEIVE_TEAMS = 'RECEIVE_TEAMS';
 var RECEIVE_TEAM = 'RECEIVE_TEAM';
 
 var receiveTeam = function receiveTeam(team) {
-  debugger;
   return {
     type: RECEIVE_TEAM,
     team: team
@@ -269,7 +268,6 @@ var requestTeams = function requestTeams() {
 };
 var requestTeam = function requestTeam(id) {
   return function (dispatch) {
-    debugger;
     return _util_team_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTeam"](id).then(function (team) {
       return dispatch(receiveTeam(team));
     });
@@ -1288,13 +1286,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
-
       if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
-        return null;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          className: "events-index-label"
+        }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Bummer! Looks like there aren't any events."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Check back another time."));
       }
 
-      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "events-index-label"
       }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1334,7 +1331,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  debugger;
   var teamId = Number(ownProps.match.params.teamId);
   var team = state.entities.teams[teamId];
   var homeEvents = Object.values(state.entities.events).filter(function (event) {
@@ -1598,13 +1594,53 @@ function (_React$Component) {
         className: "top-teams-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Image here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/13'
-      }, "Los Angeles Lakers"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lakers-div"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "top-teams-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/teams/13',
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
+      }, "Lakers"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Image here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/14'
-      }, "Golden State Warriors")))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "warriors-div"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "top-teams-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/teams/14',
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
+      }, "Warriors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "celtics-div"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "top-teams-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/teams/16',
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
+      }, "Celtics"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "knicks-div"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "top-teams-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/teams/17',
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
+      }, "Knicks")))));
     }
   }]);
 
@@ -1862,7 +1898,6 @@ var eventsReducer = function eventsReducer() {
 
   switch (action.type) {
     case _actions_event_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENTS"]:
-      debugger;
       return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, action.events);
 
     case _actions_event_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENT"]:
@@ -2234,7 +2269,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEvents", function() { return fetchEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEvent", function() { return fetchEvent; });
 var fetchEvents = function fetchEvents() {
-  debugger;
   return $.ajax({
     method: 'get',
     url: 'api/events'

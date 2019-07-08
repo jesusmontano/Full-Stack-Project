@@ -446,10 +446,50 @@ footer {
 .top-teams-div {
   margin-left: 15%;
   margin-right: 15%;
+      margin-top: 3%;
+    border-top: 1px solid #8080805e;
 }
 
 .top-teams-list-item {
+
+}
+
+.lakers-div {
+  background-image: url(https://apprecs.org/ios/images/app-icons/256/5a/578834522.jpg);
+  height: 128px;
   border-radius: .75rem;
-  border: black solid 1px;
-  background: green;
+  width: 128px;
+  background-size: cover;
+}
+
+.warriors-div {
+  background-image: url(https://herschel.com/content/dam/herschel/swatches/02596.png);
+  height: 128px;
+  border-radius: .75rem;
+  width: 128px;
+  background-size: cover;
+}
+
+.celtics-div {
+  background-image: url(https://herschel.com/content/dam/herschel/swatches/02581.png);
+  height: 128px;
+  width: 128px;
+  border-radius: .75rem;
+  background-size: cover;
+}
+
+.knicks-div {
+  background-image: url(https://apprecs.org/ios/images/app-icons/256/e5/498010853.jpg);
+  height: 128px;
+  width: 128px;
+  border-radius: .75rem;
+  background-size: cover;
+}
+
+.top-teams-text {
+    text-decoration: none;
+    color: rgb(81, 82, 84);
+    font-size: 13.33px;
+    font-weight: bolder;
+    padding-top: 7px;
 }
