@@ -8,7 +8,8 @@ const Splash = () => (
             <div className="left-side-of-nav-bar">
                 <div className="logo-and-title">
                     <img className="seatgeek-logo" src="seatgeek_logo.png" alt=""/>
-                    <h1 className="seatnerd-text">SeatNerd</h1>
+                    {/* <h1 className="seatnerd-text">SeatNerd</h1> */}
+                    <a className="seatnerd-text" href="/">SeatNerd</a>
                 </div>
                 <div className="index-navbar-buttons">
                     <button className="index-button"><Link to={"/teams"} style={{ textDecoration: 'none', color: 'white' }}>Teams</Link></button>

@@ -23,6 +23,7 @@ div {
     font-size: 20px;
     font-family: Gilroy, "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo-and-title {
@@ -315,6 +316,8 @@ footer {
     text-align: left;
     text-indent: 5%;
     margin-bottom: 15px;
+    font-weight: normal;
+    font-size: smaller
 }
 
 .teams-index-label {
@@ -353,7 +356,7 @@ footer {
     text-align: left;
     text-indent: 5%;
     margin-bottom: 15px;
-    font-size: 0.9375em;
+    font-size: smaller;
     line-height: 1.6em;
     font-weight: 400;
     color: rgb(81, 82, 84);
@@ -375,7 +378,46 @@ footer {
     height: 35px;
     cursor: pointer;
     color: white;
-    width: 55px;
+    width: 120px;
     outline: none;
     font-weight: normal;
+    font-size: 14px;
+}
+
+.event-date {
+  font-weight: bolder;
+}
+
+.venue-index-item {
+  border-top: thin solid rgb(218, 215, 215);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.venue-index-item-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.venues-index-label {
+  display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.venue-name {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: smaller;
+  margin-bottom: 7px;
+}
+
+.venue-location {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: smaller;
 }

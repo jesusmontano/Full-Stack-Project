@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 const VenueIndexItem = ({ venue }) => (
     <li className="venue-index-item">
-        <button className="venue-button">
-            <h3>{venue.name}</h3>
-            <p>{venue.city}, {venue.state}</p>
-        </button>
+        <div className="venue-index-item-div">
+            <Link style={{ textDecoration: 'none', color: 'rgb(81, 82, 84)' }}>
+                <p className="venue-name">{venue.name}</p>
+                <p className="venue-location">{venue.city}, {venue.state}</p>
+            </Link>
+        </div>
     </li>
 );
 

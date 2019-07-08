@@ -518,9 +518,11 @@ var EventIndexItem = function EventIndexItem(_ref) {
     className: "event-index-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "event-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Home: ", event.home_team_id, "  vs. Away: ", event.away_team_id, " at: ", event.venue_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "event-date"
+  }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Home: ", event.home_team_id, "  vs. Away: ", event.away_team_id, " at: ", event.venue_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
-  }, "Buy")));
+  }, "See Tickets")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventIndexItem);
@@ -1176,8 +1178,9 @@ var Splash = function Splash() {
     className: "seatgeek-logo",
     src: "seatgeek_logo.png",
     alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "seatnerd-text"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "seatnerd-text",
+    href: "/"
   }, "SeatNerd")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "index-navbar-buttons"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1478,9 +1481,18 @@ var VenueIndexItem = function VenueIndexItem(_ref) {
   var venue = _ref.venue;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "venue-index-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "venue-button"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, venue.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venue.city, ", ", venue.state)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "venue-index-item-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    style: {
+      textDecoration: 'none',
+      color: 'rgb(81, 82, 84)'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "venue-name"
+  }, venue.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "venue-location"
+  }, venue.city, ", ", venue.state))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (VenueIndexItem);

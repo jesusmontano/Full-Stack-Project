@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const EventIndexItem = ({ event }) => (
     <li className="event-index-item">
             <button className="event-button"> 
-                <div>
+                <p className="event-date">
                     {event.date}
-                </div>
-                <div>
+                </p>
+                <p>
                     Home: {event.home_team_id}  vs. Away: {event.away_team_id} at: {event.venue_id}
-                </div>
+                </p>
                 <button className="buy-button">
-                    Buy
+                    See Tickets
                 </button>
             </button>
     </li>
