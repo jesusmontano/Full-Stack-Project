@@ -1502,7 +1502,13 @@ var TeamIndexItem = function TeamIndexItem(_ref) {
   var team = _ref.team;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "team-index-item-buttons"
-  }, team.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/teams/".concat(team.id),
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, team.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TeamIndexItem);
