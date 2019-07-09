@@ -31,7 +31,7 @@ class SessionFormLogin extends React.Component {
 
     handleGuestSubmit(e) {
         e.preventDefault();
-        this.props.demoUser({ email: 'demo@user.com', username: 'demo', password: 'password' }).then(() => this.props.history.push("/events"))
+        this.props.demoUser({ email: 'demo@user.com', username: 'demo', password: 'password' }).then(() => this.props.history.push("/sell"))
             .then(this.props.closeModal);
     }
 
