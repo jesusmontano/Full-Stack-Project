@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     const tickets = Object.values(state.entities.tickets).filter(ticket => ticket.event_id === eventId);
 
     return ({
-        tickets: tickets
+        tickets: tickets,
+        event: event
     })
 };
 

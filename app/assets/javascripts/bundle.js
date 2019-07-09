@@ -692,7 +692,9 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "event-tickets-index-label"
+      }, "Tickets for ", this.props.event.home_team_id, " vs. ", this.props.event.away_team_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_event_tickets_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           ticket: ticket,
           key: ticket.id
@@ -733,7 +735,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     return ticket.event_id === eventId;
   });
   return {
-    tickets: tickets
+    tickets: tickets,
+    event: event
   };
 };
 
@@ -769,7 +772,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var EventTicketsIndexItem = function EventTicketsIndexItem(_ref) {
   var ticket = _ref.ticket;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Price: ", ticket.price, "Row: ", ticket.row, "Section: ", ticket.section));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "event-tickets-index-item-li"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", ticket.section, " \xB7 Row ", ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "buy-button-ticket"
+  }, "$", Math.trunc(ticket.price), "/ea"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventTicketsIndexItem);

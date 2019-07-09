@@ -520,3 +520,47 @@ footer {
   color: rgb(81, 82, 84);
   margin-bottom: 5%;
 }
+
+.event-tickets-index-label {
+  display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.event-tickets-index-item-li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+      font-size: smaller;
+    line-height: 1.6em;
+    font-weight: bolder;
+    color: rgb(81, 82, 84);
+    border-top: 1px solid #8080805e;
+     border-bottom: 1px solid #8080805e;
+     padding-top: 8px;
+     padding-bottom: 8px;
+         margin-left: 20%;
+    margin-right: 20%;
+}
+
+.event-tickets-index-item-li:hover {
+  transition-duration: .2s;
+  color: #1673e6;
+  background: #d7dfe6;
+}
+
+.buy-button-ticket {
+  border-radius: 8px;
+    background: #1673e6;
+    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    width: 120px;
+    outline: none;
+    font-weight: normal;
+    font-size: 14px;
+    border: none;
+}
