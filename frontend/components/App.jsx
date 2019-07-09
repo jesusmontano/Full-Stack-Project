@@ -9,6 +9,7 @@ import TeamEventsIndexContainer from './teams/team_events_index_container';
 import Splash from './splash/splash'
 import TopTeamsContainer from './top_teams/top_teams_container';
 import VenueEventsIndexContainer from './venues/venue_events_index_container';
+import EventTicketsIndexContainer from './events/event_tickets_index_container';
 import {
     Route,
     Redirect,
@@ -31,6 +32,7 @@ const App = () => (
         <Route exact path="/venues" component={VenueIndexContainer} />
         <Route exact path="/teams/:teamId" component={TeamEventsIndexContainer} />
         <Route exact path="/venues/:venueId" component={VenueEventsIndexContainer} />
+        <Route exact path="/events/:eventId/tickets" component={EventTicketsIndexContainer} />
         <footer>
             <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
                 <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
