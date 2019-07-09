@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :events, only: [:index, :show]
     resources :teams, only: [:index, :show]
     resources :venues, only: [:index, :show]
+    resources :tickets, except: [:new, :edit]
   end
   
   root "static_pages#root"
