@@ -276,6 +276,81 @@ var requestTeam = function requestTeam(id) {
 
 /***/ }),
 
+/***/ "./frontend/actions/ticket_actions.js":
+/*!********************************************!*\
+  !*** ./frontend/actions/ticket_actions.js ***!
+  \********************************************/
+/*! exports provided: RECEIVE_ALL_TICKETS, RECEIVE_TICKET, REMOVE_TICKET, fetchTickets, fetchTicket, createTicket, updateTicket, deleteTicket */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_TICKETS", function() { return RECEIVE_ALL_TICKETS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TICKET", function() { return RECEIVE_TICKET; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_TICKET", function() { return REMOVE_TICKET; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTickets", function() { return fetchTickets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTicket", function() { return fetchTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTicket", function() { return createTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTicket", function() { return updateTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTicket", function() { return deleteTicket; });
+/* harmony import */ var _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/ticket_api_util */ "./frontend/util/ticket_api_util.js");
+
+var RECEIVE_ALL_TICKETS = "RECEIVE_ALL_TICKETS";
+var RECEIVE_TICKET = "RECEIVE_TICKET";
+var REMOVE_TICKET = "REMOVE_TICKET";
+var fetchTickets = function fetchTickets() {
+  return function (dispatch) {
+    return _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTickets"]().then(function (tickets) {
+      return dispatch({
+        type: RECEIVE_ALL_TICKETS,
+        tickets: tickets
+      });
+    });
+  };
+};
+var fetchTicket = function fetchTicket(id) {
+  return function (dispatch) {
+    return _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTicket"](id).then(function (ticket) {
+      return dispatch({
+        type: RECEIVE_TICKET,
+        ticket: ticket
+      });
+    });
+  };
+};
+var createTicket = function createTicket(ticket) {
+  return function (dispatch) {
+    return _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__["createTicket"](ticket).then(function (ticket) {
+      return dispatch({
+        type: RECEIVE_TICKET,
+        ticket: ticket
+      });
+    });
+  };
+};
+var updateTicket = function updateTicket(ticket) {
+  return function (dispatch) {
+    return _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__["updateTicket"](ticket).then(function (ticket) {
+      return dispatch({
+        type: RECEIVE_TICKET,
+        ticket: ticket
+      });
+    });
+  };
+};
+var deleteTicket = function deleteTicket(id) {
+  return function (dispatch) {
+    return _util_ticket_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteTicket"](id).then(function (ticket) {
+      return dispatch({
+        type: REMOVE_TICKET,
+        ticketId: ticket.id
+      });
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/venue_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/venue_actions.js ***!
@@ -2023,6 +2098,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _events_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./events_reducer */ "./frontend/reducers/events_reducer.js");
 /* harmony import */ var _teams_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./teams_reducer */ "./frontend/reducers/teams_reducer.js");
 /* harmony import */ var _venues_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./venues_reducer */ "./frontend/reducers/venues_reducer.js");
+/* harmony import */ var _tickets_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tickets_reducer */ "./frontend/reducers/tickets_reducer.js");
+
 
 
 
@@ -2032,7 +2109,8 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   events: _events_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   teams: _teams_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  venues: _venues_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  venues: _venues_reducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  tickets: _tickets_reducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -2262,6 +2340,49 @@ var teamsReducer = function teamsReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (teamsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/tickets_reducer.js":
+/*!**********************************************!*\
+  !*** ./frontend/reducers/tickets_reducer.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_1__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var TicketsReducer = function TicketsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+
+  switch (action.type) {
+    case _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_TICKETS"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, oldState, action.tickets);
+
+    case _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TICKET"]:
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, oldState, _defineProperty({}, action.ticket.id, action.ticket));
+
+    case _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_TICKET"]:
+      var newState = lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, oldState);
+      delete newState[action.ticketId];
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TicketsReducer);
 
 /***/ }),
 
@@ -2571,6 +2692,59 @@ var fetchTeam = function fetchTeam(id) {
   return $.ajax({
     method: 'get',
     url: "api/teams/".concat(id)
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/ticket_api_util.js":
+/*!******************************************!*\
+  !*** ./frontend/util/ticket_api_util.js ***!
+  \******************************************/
+/*! exports provided: fetchTickets, fetchTicket, createTicket, updateTicket, deleteTicket */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTickets", function() { return fetchTickets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTicket", function() { return fetchTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTicket", function() { return createTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTicket", function() { return updateTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTicket", function() { return deleteTicket; });
+var fetchTickets = function fetchTickets() {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/tickets'
+  });
+};
+var fetchTicket = function fetchTicket(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "api/tickets/".concat(id)
+  });
+};
+var createTicket = function createTicket(ticket) {
+  return $.ajax({
+    url: 'api/tickets',
+    method: 'POST',
+    data: {
+      ticket: ticket
+    }
+  });
+};
+var updateTicket = function updateTicket(ticket) {
+  return $.ajax({
+    url: "api/tickets/".concat(ticket.id),
+    method: 'PATCH',
+    data: {
+      ticket: ticket
+    }
+  });
+};
+var deleteTicket = function deleteTicket(id) {
+  return $.ajax({
+    url: "api/tickets/".concat(id),
+    method: 'DELETE'
   });
 };
 
