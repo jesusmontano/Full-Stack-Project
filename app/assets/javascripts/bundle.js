@@ -694,7 +694,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "event-tickets-index-label"
-      }, "Tickets for ", this.props.event.home_team_id, " vs. ", this.props.event.away_team_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
+      }, "Tickets for ", this.props.event.home_team_id, " vs. ", this.props.event.away_team_id, " on ", this.props.event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_event_tickets_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           ticket: ticket,
           key: ticket.id
@@ -1993,7 +1993,13 @@ function (_React$Component) {
       if (this.props.events.length === 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
-        }, this.props.venue.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Bummer! Looks like there aren't any events."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Check back another time."));
+        }, this.props.venue.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "no-events-div"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          className: "bummer-no-events-header"
+        }, "Bummer! Looks like there aren't any events."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "check-back-tag"
+        }, "Check back another time.")));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -2089,7 +2095,7 @@ var VenueEventsIndexItem = function VenueEventsIndexItem(_ref) {
   }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: '/',
+    to: "events/".concat(event.id, "/tickets"),
     style: {
       textDecoration: 'none',
       color: 'white'

@@ -13,8 +13,10 @@ class VenueEventsIndex extends React.Component {
                     <label className="events-index-label">
                         {this.props.venue.name} Upcoming Games
                 </label>
-                    <h3>Bummer! Looks like there aren't any events.</h3>
-                    <p>Check back another time.</p>
+                    <div className="no-events-div">
+                            <h3 className="bummer-no-events-header">Bummer! Looks like there aren't any events.</h3>
+                            <p className="check-back-tag">Check back another time.</p>
+                    </div>
                 </div>
             )
         }

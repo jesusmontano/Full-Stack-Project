@@ -12,7 +12,7 @@ class EventTicketsIndex extends React.Component {
         return(
             <div>
                 <label className="event-tickets-index-label">
-                    Tickets for {this.props.event.home_team_id} vs. {this.props.event.away_team_id}
+                    Tickets for {this.props.event.home_team_id} vs. {this.props.event.away_team_id} on {this.props.event.date}
                 </label>
                 <ul>
                     {this.props.tickets.map(ticket => (
