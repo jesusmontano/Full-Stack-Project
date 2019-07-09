@@ -13,7 +13,7 @@ const TeamEventsIndexItem = ({ event }) => (
                 </p>
             </div>
             <button className="buy-button">
-                <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
+                <Link to={`events/${event.id}/tickets`} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
             </button>
         </div>
     </li>

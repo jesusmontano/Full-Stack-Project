@@ -1,4 +1,6 @@
 import React from 'react';
+import EventTicketsIndexItem from './event_tickets_index_item';
+import { Link } from 'react-router-dom';
 
 class EventTicketsIndex extends React.Component {
     componentDidMount() {
@@ -9,7 +11,11 @@ class EventTicketsIndex extends React.Component {
     render() {
         return(
             <div>
-                Testing...
+                <ul>
+                    {this.props.tickets.map(ticket => (
+                        <EventTicketsIndexItem ticket={ticket} key={ticket.id}/>
+                    ))}
+                </ul>
             </div>
         )
     }
