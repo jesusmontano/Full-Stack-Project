@@ -1469,7 +1469,13 @@ var Splash = function Splash() {
     }
   }, "Venues")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "index-button"
-  }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/sell",
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Sell")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-splash-tagline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets.")));
 };
@@ -1870,15 +1876,32 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Sell Your Ticket on SeatNerd"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Create Ticket Listing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Owner Id", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Owner ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.owner_id,
         onChange: this.update('owner_id')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Venue ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Venue ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
         value: this.state.venue_id,
         onChange: this.update('venue_id')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Event ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.event_id,
+        onChange: this.update('event_id')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.price,
+        onChange: this.update('price')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Row", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.row,
+        onChange: this.update('row')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Section", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.section,
+        onChange: this.update('section')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Create New Ticket Listing"

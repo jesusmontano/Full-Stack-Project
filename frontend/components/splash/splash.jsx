@@ -15,7 +15,7 @@ const Splash = () => (
                     <button className="index-button"><Link to={"/teams"} style={{ textDecoration: 'none', color: 'white' }}>Teams</Link></button>
                     <button className="index-button"><Link to={"/events"} style={{ textDecoration: 'none', color: 'white' }}>Events</Link></button>
                     <button className="index-button"><Link to={"/venues"} style={{ textDecoration: 'none', color: 'white' }}>Venues</Link></button>
-                    <button className="index-button">Sell</button>
+                    <button className="index-button"><Link to={"/sell"} style={{ textDecoration: 'none', color: 'white' }}>Sell</Link></button>
                 </div>
             </div>
             <GreetingContainer />

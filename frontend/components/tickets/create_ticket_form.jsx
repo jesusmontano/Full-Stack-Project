@@ -21,9 +21,11 @@ class CreateTicketForm extends React.Component {
     render() {
         return (
             <div>
+                    <h3>Sell Your Ticket on SeatNerd</h3>
+                    
                 <form onSubmit={this.handleSubmit}>
-                    <h3>Create Ticket Listing</h3>
-                    <label>Owner Id
+
+                    <label>Owner ID
                         <input
                         type="text"
                         value={this.state.owner_id}
@@ -31,9 +33,38 @@ class CreateTicketForm extends React.Component {
                     </label>
 
                     <label>Venue ID
-                        <textarea
+                        <input
+                        type="text"
                         value={this.state.venue_id}
                         onChange={this.update('venue_id')} />
+                    </label>
+
+                    <label>Event ID
+                        <input
+                        type="text"
+                        value={this.state.event_id}
+                        onChange={this.update('event_id')} />
+                    </label>
+
+                    <label>Price
+                        <input
+                        type="text"
+                        value={this.state.price}
+                        onChange={this.update('price')} />
+                    </label>
+
+                    <label>Row
+                        <input
+                        type="text"
+                        value={this.state.row}
+                        onChange={this.update('row')} />
+                    </label>
+
+                    <label>Section
+                        <input
+                        type="text"
+                        value={this.state.section}
+                        onChange={this.update('section')} />
                     </label>
 
                     <input type="submit" value="Create New Ticket Listing" />
