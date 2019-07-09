@@ -5,6 +5,7 @@ class TeamEventsIndex extends React.Component {
     componentDidMount() {
         // this.props.requestTeam(this.props.match.params.teamId);
         this.props.requestEvents();
+        this.props.fetchTickets();
     }
 
     render() {
@@ -13,9 +14,11 @@ class TeamEventsIndex extends React.Component {
                 <div>
                     <label className="events-index-label">
                         {this.props.team.name} Upcoming Games
-                </label>
-                    <h3>Bummer! Looks like there aren't any events.</h3>
-                    <p>Check back another time.</p>
+                    </label>
+                        <div className="no-events-div">
+                            <h3 className="bummer-no-events-header">Bummer! Looks like there aren't any events.</h3>
+                            <p className="check-back-tag">Check back another time.</p>
+                        </div>
                 </div>
             )
         }

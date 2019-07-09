@@ -1514,6 +1514,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       // this.props.requestTeam(this.props.match.params.teamId);
       this.props.requestEvents();
+      this.props.fetchTickets();
     }
   }, {
     key: "render",
@@ -1521,7 +1522,13 @@ function (_React$Component) {
       if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
-        }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Bummer! Looks like there aren't any events."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Check back another time."));
+        }, this.props.team.name, " Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "no-events-div"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          className: "bummer-no-events-header"
+        }, "Bummer! Looks like there aren't any events."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "check-back-tag"
+        }, "Check back another time.")));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -1557,6 +1564,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/team_actions */ "./frontend/actions/team_actions.js");
 /* harmony import */ var _team_events_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./team_events_index */ "./frontend/components/teams/team_events_index.jsx");
 /* harmony import */ var _actions_event_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/event_actions */ "./frontend/actions/event_actions.js");
+/* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
+
 
 
 
@@ -1585,6 +1594,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     requestEvents: function requestEvents() {
       return dispatch(Object(_actions_event_actions__WEBPACK_IMPORTED_MODULE_3__["requestEvents"])());
+    },
+    fetchTickets: function fetchTickets() {
+      return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_4__["fetchTickets"])());
     }
   };
 };
