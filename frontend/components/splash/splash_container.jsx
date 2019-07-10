@@ -5,7 +5,7 @@ import { login, clearErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Splash from './splash';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         errors: state.errors.session,
         formType: 'Login',
@@ -29,4 +29,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Splash);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Splash));

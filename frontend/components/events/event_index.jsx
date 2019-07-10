@@ -10,6 +10,9 @@ class EventIndex extends React.Component {
     }
 
     render() {
+        if (Object.values(this.props.venues).length === 0) {
+            return null;
+        }
         return (
             <div>
                 <label className="events-index-label">
