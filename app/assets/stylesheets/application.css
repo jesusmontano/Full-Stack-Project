@@ -393,6 +393,7 @@ footer {
 
 .event-date {
   font-weight: bolder;
+  width: 80px;
 }
 
 .venue-index-item {
@@ -565,4 +566,79 @@ footer {
     font-weight: normal;
     font-size: 14px;
     border: none;
+}
+
+.add-tickets-header {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.create-ticket-instructions {
+    display: flex;
+    justify-content: center;
+        color: rgb(81, 82, 84);
+}
+
+.main-ticket-form-div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.create-ticket-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 43%;
+  margin-right: 43%;
+}
+
+.create-form-inputs {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.57143em;
+    font-weight: 400;
+    color: rgb(81, 82, 84);
+    font-size: 0.875rem;
+    margin: 0px;
+    padding: 0px 0px 0.25rem;
+}
+
+.create-ticket-input {
+  width: 94%;
+    height: 30px;
+    border-radius: 0.625rem;
+    border-style: solid;
+    border-color: gray;
+    border-image: initial;
+    outline: none;
+    border-width: thin;
+    padding-left: 0.9375rem;
+    font-size: medium;
+    color: black;
+}
+
+ .create-ticket-input:focus {
+   outline: none;
+   border-color: #9ecaed;
+   box-shadow: 0 0 10px #9ecaed;
+ }
+
+.sell-ticket-submit {
+      border-radius: 8px;
+    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    background: rgb(22, 115, 230);
+    border-color: rgb(22, 115, 230);
+    transition: background 0.2s ease 0s;
+    margin-top: 20px;
+}
+
+.sell-ticket-submit:hover {
+  background-color: rgb(60, 90, 150);
+  border-color: rgb(60, 90, 150);
+  cursor: pointer;
 }

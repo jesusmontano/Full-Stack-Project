@@ -2013,35 +2013,61 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Sell Your Ticket on SeatNerd"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-ticket-form-div"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "add-tickets-header"
+      }, "Add Tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "create-ticket-instructions"
+      }, "Upload your tickets, add a price, and get paid. Our transparent pricing means more money in your pocket.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "create-ticket-form",
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Owner ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Owner ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.owner_id,
         onChange: this.update('owner_id')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Venue ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Venue ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.venue_id,
         onChange: this.update('venue_id')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Event ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Event ID", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.event_id,
         onChange: this.update('event_id')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.price,
         onChange: this.update('price')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Row", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Row", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.row,
         onChange: this.update('row')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Section", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "create-form-inputs"
+      }, "Section", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "create-ticket-input",
         type: "text",
         value: this.state.section,
         onChange: this.update('section')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "sell-ticket-submit",
         type: "submit",
-        value: "Create New Ticket Listing"
+        value: "Add Ticket"
       })));
     }
   }]);
