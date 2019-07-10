@@ -9,19 +9,24 @@ const TeamEventsIndexItem = ({ event, teams, venues }) => {
 
     return (
         <li className="event-index-item">
-            <div className="event-div">
-                <div className="event-information">
-                    <p className="event-date">
-                        {event.date}
-                    </p>
-                    <p>
-                        {homeTeamName}  vs. {awayTeamName} at: {venueName}
-                    </p>
+            <div className="event-div"> 
+                        <div>
+                            <p className="event-date">
+                                {event.date}
+                            </p>
+                        </div>
+                        <div className="teams-and-location-div">
+                            <p className="away-team-home-team-tag">
+                                {awayTeamName} at {homeTeamName}
+                            </p>
+                            <p>
+                                {venueName}
+                            </p>
+                        </div>
+                    <button className="buy-button">
+                        <Link to={`events/${event.id}/tickets`} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
+                    </button>
                 </div>
-                <button className="buy-button">
-                    <Link to={`events/${event.id}/tickets`} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
-                </button>
-            </div>
         </li>
     );
 }

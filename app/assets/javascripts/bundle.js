@@ -1842,11 +1842,13 @@ var TeamEventsIndexItem = function TeamEventsIndexItem(_ref) {
     className: "event-index-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "event-div"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "event-information"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "event-date"
-  }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, homeTeamName, "  vs. ", awayTeamName, " at: ", venueName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, event.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "teams-and-location-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "away-team-home-team-tag"
+  }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venueName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "events/".concat(event.id, "/tickets"),
