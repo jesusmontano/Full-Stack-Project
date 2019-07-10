@@ -6,6 +6,8 @@ class TeamEventsIndex extends React.Component {
         // this.props.requestTeam(this.props.match.params.teamId);
         this.props.requestEvents();
         this.props.fetchTickets();
+        this.props.requestVenues();
+        this.props.requestTeams();
     }
 
     render() {
@@ -29,7 +31,7 @@ class TeamEventsIndex extends React.Component {
                 </label>
                 <ul className="events-list">
                     {this.props.homeEvents.concat(this.props.awayEvents).map(event => (
-                        <TeamEventsIndexItem event={event} key={event.id} />
+                        <TeamEventsIndexItem event={event} key={event.id} venues={this.props.venues} teams={this.props.teams}/>
                     ))}
                 </ul>
             </div>
