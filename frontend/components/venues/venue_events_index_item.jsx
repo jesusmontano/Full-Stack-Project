@@ -24,7 +24,7 @@ const VenueEventsIndexItem = ({ event, teams, venues }) => {
                             </p>
                         </div>
                     <button className="buy-button">
-                        <Link to={`events/${event.id}/tickets`} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
+                        <Link to={`/events/${event.id}/tickets`} style={{ textDecoration: 'none', color: 'white' }}>See Tickets</Link>
                     </button>
                 </div>
     </li>

@@ -1857,7 +1857,7 @@ var TeamEventsIndexItem = function TeamEventsIndexItem(_ref) {
   }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venueName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "events/".concat(event.id, "/tickets"),
+    to: "/events/".concat(event.id, "/tickets"),
     style: {
       textDecoration: 'none',
       color: 'white'
@@ -2676,7 +2676,7 @@ var VenueEventsIndexItem = function VenueEventsIndexItem(_ref) {
   }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venueName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "events/".concat(event.id, "/tickets"),
+    to: "/events/".concat(event.id, "/tickets"),
     style: {
       textDecoration: 'none',
       color: 'white'
