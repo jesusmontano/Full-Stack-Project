@@ -6,7 +6,7 @@ import EventIndexContainer from './events/event_index_container';
 import TeamIndexContainer from './teams/team_index_container';
 import VenueIndexContainer from './venues/venue_index_container';
 import TeamEventsIndexContainer from './teams/team_events_index_container';
-import Splash from './splash/splash'
+import SplashContainer from './splash/splash_container'
 import TopTeamsContainer from './top_teams/top_teams_container';
 import VenueEventsIndexContainer from './venues/venue_events_index_container';
 import EventTicketsIndexContainer from './events/event_tickets_index_container';
@@ -24,7 +24,7 @@ import Modal from './modal/modal';
 const App = () => (
     <div>
         <Modal />
-        <Splash />
+        <SplashContainer />
         <Route exact path="/" component={TopTeamsContainer}/>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />

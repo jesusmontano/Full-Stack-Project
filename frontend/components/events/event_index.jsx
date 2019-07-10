@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 class EventIndex extends React.Component {
     componentDidMount() {
         this.props.requestEvents();
+        this.props.requestVenues();
+        this.props.requestTeams();
     }
 
     render() {
@@ -15,7 +17,7 @@ class EventIndex extends React.Component {
                 </label>
                 <ul className="events-list">
                     {this.props.events.map(event => (
-                        <EventIndexItem event={event} key={event.id} />
+                        <EventIndexItem event={event} key={event.id} venues={this.props.venues} teams={this.props.teams}/>
                     ))}
                 </ul>
             </div>

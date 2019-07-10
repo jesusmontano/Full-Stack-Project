@@ -2,8 +2,23 @@ import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import { Link } from 'react-router-dom';
 
-const Splash = () => (
-    <header className="splash-test">
+class Splash extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        if (this.props.currentUserId) {
+            this.props.history.push('/sell')
+        } else {
+            this.props.openModal('login')
+        }
+    }
+    
+    render() {
+    return (<header className="splash-test">
         <div className="navbar">
             <div className="left-side-of-nav-bar">
                 <div className="logo-and-title">
@@ -15,7 +30,9 @@ const Splash = () => (
                     <button className="index-button"><Link to={"/teams"} style={{ textDecoration: 'none', color: 'white' }}>Teams</Link></button>
                     <button className="index-button"><Link to={"/events"} style={{ textDecoration: 'none', color: 'white' }}>Events</Link></button>
                     <button className="index-button"><Link to={"/venues"} style={{ textDecoration: 'none', color: 'white' }}>Venues</Link></button>
-                    <button className="index-button"><Link to={"/sell"} style={{ textDecoration: 'none', color: 'white' }}>Sell</Link></button>
+                    {/* <button className="index-button" onClick={this.handleClick}><Link to={"/sell"} style={{ textDecoration: 'none', color: 'white' }}>Sell</Link></button> */}
+                    <button className="index-button" onClick={this.handleClick}>Sell</button>
+
                 </div>
             </div>
             <GreetingContainer />
@@ -24,7 +41,7 @@ const Splash = () => (
             <p>Life's an event.</p>
             <p>We have the tickets.</p>
         </div>
-    </header>
-)
+    </header>)}
+};
 
 export default Splash;
