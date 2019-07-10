@@ -652,3 +652,35 @@ footer {
   font-weight: bolder;
   color: rgb(25, 25, 25);
 }
+
+.staples-div {
+  background-image: url(https://fastly.4sqi.net/img/general/200x200/6238_vqF2uFKz9o7Hq0SimSP9Tuvq4w1XF-sZ_Q23-ooE9ss.jpg);
+  height: 128px;
+  border-radius: .75rem;
+  width: 128px;
+  background-size: cover;
+}
+
+.oracle-div {
+  background-image: url(https://pbs.twimg.com/profile_images/1063986298069733376/d2-WBrfV.jpg);
+  height: 128px;
+  border-radius: .75rem;
+  width: 128px;
+  background-size: cover;
+}
+
+.td-garden-div {
+  background-image: url(https://blog.faneuilhallmarketplace.com/td-garden/wp-content/uploads/sites/169/2016/04/tdgarden-goes-green-tonight-8pm-doors-open-at-7.-letsgoceltics-greenrunsdeep.jpg);
+  height: 128px;
+  border-radius: .75rem;
+  width: 128px;
+  background-size: cover;
+}
+
+.barclays-div {
+  background-image: url(https://cdn-s3.si.com/s3fs-public/2014/04/barclayslead.jpg);
+  height: 128px;
+  border-radius: .75rem;
+  width: 128px;
+  background-size: cover;
+}

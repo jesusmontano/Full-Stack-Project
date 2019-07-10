@@ -11,6 +11,7 @@ import TopTeamsContainer from './top_teams/top_teams_container';
 import VenueEventsIndexContainer from './venues/venue_events_index_container';
 import EventTicketsIndexContainer from './events/event_tickets_index_container';
 import CreateTicketFormContainer from './tickets/create_ticket_form_container';
+import TopVenuesContainer from './top_venues/top_venues_container';
 import {
     Route,
     Redirect,
@@ -26,6 +27,7 @@ const App = () => (
         <Modal />
         <SplashContainer />
         <Route exact path="/" component={TopTeamsContainer}/>
+        <Route exact path="/" component={TopVenuesContainer}/>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         <Route exact path="/events" component={EventIndexContainer} />
