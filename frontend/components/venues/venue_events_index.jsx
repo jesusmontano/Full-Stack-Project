@@ -4,6 +4,7 @@ import VenueEventsIndexItem from './venue_events_index_item';
 class VenueEventsIndex extends React.Component {
     componentDidMount() {
         this.props.requestEvents();
+        this.props.requestVenues();
     }
 
     render() {

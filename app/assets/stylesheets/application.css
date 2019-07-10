@@ -375,7 +375,7 @@ footer {
 .event-div:hover {
   transition-duration: .4s;
   box-shadow: 5px 10px 18px -10px #888888;
-  color: #1673e6;
+
 }
 
 .buy-button {
@@ -394,6 +394,7 @@ footer {
 .event-date {
   font-weight: bolder;
   width: 80px;
+  color: rgb(25, 25, 25);
 }
 
 .venue-index-item {
@@ -641,4 +642,13 @@ footer {
   background-color: rgb(60, 90, 150);
   border-color: rgb(60, 90, 150);
   cursor: pointer;
+}
+
+.teams-and-location-div {
+  width: 375px;
+}
+
+.away-team-home-team-tag {
+  font-weight: bolder;
+  color: rgb(25, 25, 25);
 }

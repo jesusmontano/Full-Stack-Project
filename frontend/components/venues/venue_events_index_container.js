@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestVenue } from '../../actions/venue_actions';
+import { requestVenues } from '../../actions/venue_actions';
 import VenueEventsIndex from './venue_events_index';
 import { requestEvents } from '../../actions/event_actions';
 
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    requestVenue: (id) => dispatch(requestVenue(id)),
+    requestVenues: () => dispatch(requestVenues()),
     requestEvents: () => dispatch(requestEvents())
 });
 
