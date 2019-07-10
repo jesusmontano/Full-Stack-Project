@@ -725,13 +725,27 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.props.requestEvents();
       this.props.fetchTickets();
+      this.props.requestTeams();
+      this.props.requestVenues();
     }
   }, {
     key: "render",
     value: function render() {
+      if (Object.values(this.props.tickets).length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          className: "events-index-label"
+        }, "Tickets for ", this.props.teams[this.props.event.home_team_id].name, " vs. ", this.props.teams[this.props.event.away_team_id].name, " on ", this.props.event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "no-events-div"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          className: "bummer-no-events-header"
+        }, "Bummer! Looks like there aren't any tickets."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "check-back-tag"
+        }, "Check back another time.")));
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "event-tickets-index-label"
-      }, "Tickets for ", this.props.event.home_team_id, " vs. ", this.props.event.away_team_id, " on ", this.props.event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
+      }, "Tickets for ", this.props.teams[this.props.event.home_team_id].name, " vs. ", this.props.teams[this.props.event.away_team_id].name, " on ", this.props.event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_event_tickets_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           ticket: ticket,
           key: ticket.id
@@ -760,6 +774,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_event_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/event_actions */ "./frontend/actions/event_actions.js");
 /* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
 /* harmony import */ var _event_tickets_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./event_tickets_index */ "./frontend/components/events/event_tickets_index.jsx");
+/* harmony import */ var _actions_venue_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/venue_actions */ "./frontend/actions/venue_actions.js");
+/* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/team_actions */ "./frontend/actions/team_actions.js");
+
+
 
 
 
@@ -771,9 +789,13 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   var tickets = Object.values(state.entities.tickets).filter(function (ticket) {
     return ticket.event_id === eventId;
   });
+  var teams = state.entities.teams;
+  var venues = state.entities.venues;
   return {
     tickets: tickets,
-    event: event
+    event: event,
+    teams: teams,
+    venues: venues
   };
 };
 
@@ -784,6 +806,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchTickets: function fetchTickets() {
       return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__["fetchTickets"])());
+    },
+    requestTeams: function requestTeams() {
+      return dispatch(Object(_actions_team_actions__WEBPACK_IMPORTED_MODULE_5__["requestTeams"])());
+    },
+    requestVenues: function requestVenues() {
+      return dispatch(Object(_actions_venue_actions__WEBPACK_IMPORTED_MODULE_4__["requestVenues"])());
     }
   };
 };
@@ -1678,6 +1706,10 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var _this = this;
+
+      if (Object.values(this.props.venues).length === 0) {
+        return null;
+      }
 
       if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {

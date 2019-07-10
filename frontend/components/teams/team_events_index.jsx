@@ -11,6 +11,11 @@ class TeamEventsIndex extends React.Component {
     }
 
     render() {
+
+        if (Object.values(this.props.venues).length === 0) {
+            return null;
+        }
+
         if (this.props.homeEvents.length === 0 && this.props.awayEvents.length === 0) {
             return (
                 <div>
