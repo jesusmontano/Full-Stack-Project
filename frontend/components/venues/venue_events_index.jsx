@@ -5,9 +5,16 @@ class VenueEventsIndex extends React.Component {
     componentDidMount() {
         this.props.requestEvents();
         this.props.requestVenues();
+        this.props.requestTeams();
+        this.props.fetchTickets()
     }
 
     render() {
+
+        if (Object.values(this.props.venues).length === 0) {
+            return null;
+        }
+
         if (this.props.events.length === 0) {
             return (
                 <div>
@@ -28,7 +35,7 @@ class VenueEventsIndex extends React.Component {
                 </label>
                 <ul className="events-list">
                     {this.props.events.map(event => (
-                        <VenueEventsIndexItem event={event} key={event.id} />
+                        <VenueEventsIndexItem event={event} key={event.id} venues={this.props.venues} teams={this.props.teams}/>
                     ))}
                 </ul>
             </div>

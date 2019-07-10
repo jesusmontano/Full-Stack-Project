@@ -2377,10 +2377,18 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.props.requestEvents();
       this.props.requestVenues();
+      this.props.requestTeams();
+      this.props.fetchTickets();
     }
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
+      if (Object.values(this.props.venues).length === 0) {
+        return null;
+      }
+
       if (this.props.events.length === 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
@@ -2400,7 +2408,9 @@ function (_React$Component) {
       }, this.props.events.map(function (event) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_venue_events_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           event: event,
-          key: event.id
+          key: event.id,
+          venues: _this.props.venues,
+          teams: _this.props.teams
         });
       })));
     }
@@ -2426,6 +2436,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_venue_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/venue_actions */ "./frontend/actions/venue_actions.js");
 /* harmony import */ var _venue_events_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./venue_events_index */ "./frontend/components/venues/venue_events_index.jsx");
 /* harmony import */ var _actions_event_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/event_actions */ "./frontend/actions/event_actions.js");
+/* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
+/* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/team_actions */ "./frontend/actions/team_actions.js");
+
+
 
 
 
@@ -2437,9 +2451,13 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   var events = Object.values(state.entities.events).filter(function (event) {
     return event.venue_id === venueId;
   });
+  var teams = state.entities.teams;
+  var venues = state.entities.venues;
   return {
     venue: venue,
-    events: events
+    events: events,
+    teams: teams,
+    venues: venues
   };
 };
 
@@ -2450,6 +2468,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     requestEvents: function requestEvents() {
       return dispatch(Object(_actions_event_actions__WEBPACK_IMPORTED_MODULE_3__["requestEvents"])());
+    },
+    fetchTickets: function fetchTickets() {
+      return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_4__["fetchTickets"])());
+    },
+    requestTeams: function requestTeams() {
+      return dispatch(Object(_actions_team_actions__WEBPACK_IMPORTED_MODULE_5__["requestTeams"])());
     }
   };
 };
@@ -2474,16 +2498,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var VenueEventsIndexItem = function VenueEventsIndexItem(_ref) {
-  var event = _ref.event;
+  var event = _ref.event,
+      teams = _ref.teams,
+      venues = _ref.venues;
+  var homeTeamName = teams[event.home_team_id].name;
+  var awayTeamName = teams[event.away_team_id].name;
+  var venueName = venues[event.venue_id].name;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "event-index-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "event-div"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "event-information"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "event-date"
-  }, event.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, event.home_team_id, "  vs. ", event.away_team_id, " at: ", event.venue_id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, event.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "teams-and-location-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "away-team-home-team-tag"
+  }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venueName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "events/".concat(event.id, "/tickets"),
