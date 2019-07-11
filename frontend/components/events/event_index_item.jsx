@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const EventIndexItem = ({ event, teams, venues }) => {
-    debugger;
     let homeTeamName = teams[event.home_team_id].name;
     let awayTeamName = teams[event.away_team_id].name;
     let venueName = venues[event.venue_id].name;

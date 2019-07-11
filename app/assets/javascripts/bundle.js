@@ -785,7 +785,6 @@ var EventIndexItem = function EventIndexItem(_ref) {
   var event = _ref.event,
       teams = _ref.teams,
       venues = _ref.venues;
-  debugger;
   var homeTeamName = teams[event.home_team_id].name;
   var awayTeamName = teams[event.away_team_id].name;
   var venueName = venues[event.venue_id].name;
