@@ -517,6 +517,7 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _account_ticket_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./account_ticket_item */ "./frontend/components/account/account_ticket_item.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -534,6 +535,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -559,13 +561,55 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       if (!this.props.userId) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Your must be logged in to view the contents of this page.");
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          className: "events-index-label"
+        }, "You must be logged in to view the contents of this page.");
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "These are the ticked owned by the user with ID: ", this.props.userId, "Those tickets IDs are: ", this.props.tickets.map(function (ticket) {
-        return ticket.id;
-      }));
+      if (this.props.tickets.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          className: "events-index-label"
+        }, "My Tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "no-events-div"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+          className: "bummer-no-events-header"
+        }, "Bummer! Looks like you don't own any tickets."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "check-back-tag"
+        }, "Add a ticket to sell or check out our marketplace.")));
+      }
+
+      if (Object.values(this.props.teams).length === 0) {
+        return null; // return (
+        //     <p>Your must be logged in to view the contents of this page.</p>
+        // )
+      }
+
+      if (Object.values(this.props.venues).length === 0) {
+        return null; // return (
+        //     <p>Your must be logged in to view the contents of this page.</p>
+        // )
+      }
+
+      if (Object.values(this.props.events).length === 0) {
+        return null; // return (
+        //     <p>Your must be logged in to view the contents of this page.</p>
+        // )
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "events-index-label"
+      }, "My Tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.tickets.map(function (ticket) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_account_ticket_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          ticket: ticket,
+          key: ticket.id,
+          events: _this.props.events,
+          teams: _this.props.teams,
+          venues: _this.props.venues
+        });
+      })));
     }
   }]);
 
@@ -601,13 +645,19 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   var userId = state.session.id;
   var user = state.entities.users[userId];
+  var events = state.entities.events;
+  var teams = state.entities.teams;
+  var venues = state.entities.venues;
   var tickets = Object.values(state.entities.tickets).filter(function (ticket) {
     return ticket.owner_id === userId;
   });
   return {
     userId: userId,
     user: user,
-    tickets: tickets
+    tickets: tickets,
+    events: events,
+    teams: teams,
+    venues: venues
   };
 };
 
@@ -629,6 +679,65 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_account__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/account/account_ticket_item.jsx":
+/*!*************************************************************!*\
+  !*** ./frontend/components/account/account_ticket_item.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var AccountTicketItem = function AccountTicketItem(_ref) {
+  var ticket = _ref.ticket,
+      events = _ref.events,
+      teams = _ref.teams,
+      venues = _ref.venues;
+  debugger;
+  var homeTeamId = events[ticket.event_id].home_team_id;
+  var awayTeamId = events[ticket.event_id].away_team_id;
+  var homeTeamName = teams[homeTeamId].name;
+  var awayTeamName = teams[awayTeamId].name;
+  var date = events[ticket.event_id].date;
+  var venue = venues[ticket.venue_id].name;
+
+  if (!events) {
+    return null;
+  }
+
+  if (!ticket) {
+    return null;
+  }
+
+  if (!teams) {
+    return null;
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "my-tickets-list-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ticket-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "event-date"
+  }, date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "teams-and-location-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "away-team-home-team-tag"
+  }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venue)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "buy-button-top"
+  }, "Update Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "buy-button"
+  }, "Remove")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AccountTicketItem);
 
 /***/ }),
 

@@ -693,3 +693,49 @@ footer {
   width: 128px;
   background-size: cover;
 }
+
+.ticket-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    background:white;
+    border: 1px solid rgb(234, 237, 241);
+    letter-spacing: .02em;
+    font-weight: lighter;
+    text-align: center;
+    text-indent: 5%;
+    margin-bottom: 15px;
+    font-size: smaller;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: rgb(81, 82, 84);
+    border-radius: .75rem;
+    height: 50px;
+    margin-top: 30px;
+    height: 100px;
+}
+
+.ticket-div:hover {
+  transition-duration: .4s;
+  box-shadow: 5px 10px 18px -10px #888888;
+}
+
+.my-tickets-list-item {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.buy-button-top {
+  border-radius: 8px;
+    background: #1673e6;
+    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    width: 120px;
+    outline: none;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 6px;
+}

@@ -8,12 +8,18 @@ import { fetchTickets } from '../../actions/ticket_actions';
 const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     const user = state.entities.users[userId];
+    const events = state.entities.events;
+    const teams = state.entities.teams;
+    const venues = state.entities.venues;
     const tickets = Object.values(state.entities.tickets).filter(ticket => ticket.owner_id === userId);
 
     return ({
         userId: userId,
         user: user,
-        tickets: tickets
+        tickets: tickets,
+        events: events,
+        teams: teams,
+        venues: venues
     })
 };
 
