@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
     handleGuestSubmit(e) {
         e.preventDefault();
-        this.props.demoUser({email: 'demo@user.com', username: 'demo', password: 'password'}).then(() => this.props.history.push("/sell"))
+        this.props.demoUser({email: 'demo@user.com', username: 'demo', password: 'password'}).then(() => this.props.history.push("/account"))
             .then(this.props.closeModal);
     }
 

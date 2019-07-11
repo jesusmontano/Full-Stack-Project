@@ -1338,7 +1338,7 @@ function (_React$Component) {
         username: 'demo',
         password: 'password'
       }).then(function () {
-        return _this3.props.history.push("/sell");
+        return _this3.props.history.push("/account");
       }).then(this.props.closeModal);
     }
   }, {
@@ -1495,7 +1495,7 @@ function (_React$Component) {
         username: 'demo',
         password: 'password'
       }).then(function () {
-        return _this3.props.history.push("/sell");
+        return _this3.props.history.push("/account");
       }).then(this.props.closeModal);
     }
   }, {
