@@ -1,5 +1,6 @@
 import React from 'react';
 import AccountTicketItem from './account_ticket_item';
+import { Link } from 'react-router-dom'
 
 class Account extends React.Component {
     componentDidMount() {
@@ -56,7 +57,7 @@ class Account extends React.Component {
         return (
             <div>
                 <label className="events-index-label">
-                    My Tickets
+                    My Ticket Listings
                 </label>
                 <ul>
                     {this.props.tickets.map(ticket => (
