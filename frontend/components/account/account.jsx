@@ -9,6 +9,12 @@ class Account extends React.Component {
     }
 
     render() {
+        if (!(this.props.userId)) {
+            return (
+                <p>Your must be logged in to view the contents of this page.</p>
+            )
+        }
+
         return (
             <div>
                 These are the ticked owned by the user with ID: {this.props.userId}

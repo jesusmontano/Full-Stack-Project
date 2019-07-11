@@ -234,6 +234,15 @@ footer {
     font-weight: lighter;
 }
 
+.header-button-account {
+    background: #00000033;
+    color: white;
+    border: transparent;
+    letter-spacing: .02em;
+    font-weight: lighter;
+    margin-right: 15px;
+}
+
 .other-form-suggestion {
     font-family: proxima-nova, "Proxima Nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
     line-height: 1.57143em;

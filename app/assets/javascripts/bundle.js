@@ -559,6 +559,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      if (!this.props.userId) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Your must be logged in to view the contents of this page.");
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "These are the ticked owned by the user with ID: ", this.props.userId, "Those tickets IDs are: ", this.props.tickets.map(function (ticket) {
         return ticket.id;
       }));
@@ -995,6 +999,8 @@ var EventTicketsIndexItem = function EventTicketsIndexItem(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 var Greeting = function Greeting(_ref) {
@@ -1022,6 +1028,14 @@ var Greeting = function Greeting(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "header-group"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "header-button-account"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/account",
+      style: {
+        textDecoration: 'none',
+        color: 'white'
+      }
+    }, "Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "header-button",
       onClick: logout
     }, "Log Out"));
