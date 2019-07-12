@@ -728,11 +728,15 @@ var AccountTicketItem = function AccountTicketItem(_ref) {
     className: "ticket-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "event-date"
-  }, date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "event-date"
+  }, "Section ", ticket.section, ": Row ", ticket.row)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "teams-and-location-div"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "away-team-home-team-tag"
-  }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venue)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, awayTeamName, " at ", homeTeamName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, venue)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "event-date"
+  }, "Price: $", ticket.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button-top"
   }, "Update Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
@@ -2506,7 +2510,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/13',
+        to: '/teams/19',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2518,7 +2522,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/14',
+        to: '/teams/20',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2530,7 +2534,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/16',
+        to: '/teams/24',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2542,7 +2546,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/17',
+        to: '/teams/21',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2647,13 +2651,13 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/12'
+        to: '/venues/17'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "staples-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/12',
+        to: '/venues/17',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2661,13 +2665,13 @@ function (_React$Component) {
       }, "Staples Center"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/13'
+        to: '/venues/18'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "oracle-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/13',
+        to: '/venues/18',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2675,13 +2679,13 @@ function (_React$Component) {
       }, "Oracle Arena"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/15'
+        to: '/venues/21'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "td-garden-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/15',
+        to: '/venues/21',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -2689,13 +2693,13 @@ function (_React$Component) {
       }, "TD Garden"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/16'
+        to: '/venues/20'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "barclays-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/16',
+        to: '/venues/20',
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'

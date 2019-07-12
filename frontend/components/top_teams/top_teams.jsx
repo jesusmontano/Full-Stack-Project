@@ -16,7 +16,7 @@ class TopTeams extends React.Component {
 
                         </div>
                         <p className="top-teams-text">
-                            <Link to={'/teams/13'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Lakers</Link>
+                            <Link to={'/teams/19'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Lakers</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
@@ -24,7 +24,7 @@ class TopTeams extends React.Component {
 
                         </div>
                         <p className="top-teams-text">
-                            <Link to={'/teams/14'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Warriors</Link>
+                            <Link to={'/teams/20'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Warriors</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
@@ -32,7 +32,7 @@ class TopTeams extends React.Component {
 
                         </div>
                         <p className="top-teams-text">
-                            <Link to={'/teams/16'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Celtics</Link>
+                            <Link to={'/teams/24'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Celtics</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
@@ -40,7 +40,7 @@ class TopTeams extends React.Component {
 
                         </div>
                         <p className="top-teams-text">
-                            <Link to={'/teams/17'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Knicks</Link>
+                            <Link to={'/teams/21'} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Knicks</Link>
                         </p>
                     </li>
                 </ul>

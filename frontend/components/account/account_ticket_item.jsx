@@ -29,12 +29,22 @@ const AccountTicketItem = ({ticket, events, teams, venues}) => {
                         {date}
                     </p>
                 </div>
+                <div>
+                    <p className="event-date">
+                        Section {ticket.section}: Row {ticket.row}
+                    </p>
+                </div>
                 <div className="teams-and-location-div">
                     <p className="away-team-home-team-tag"> 
                         {awayTeamName} at {homeTeamName}
                     </p>
                     <p>
                         {venue}
+                    </p>
+                </div>
+                <div>
+                    <p className="event-date">
+                        Price: ${ticket.price}
                     </p>
                 </div>
                 <div>
