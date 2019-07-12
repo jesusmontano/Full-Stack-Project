@@ -1,24 +1,34 @@
-# README
+# SeatNerd
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SeatNerd is a web app for buying and selling tickets for sporting events. The
+app is based on SeatGeek. SeatNerd uses Ruby on Rails for the backend with 
+React and Redux for the frontend.
 
-Things you may want to cover:
+[Live Demo](https://seatnerd.herokuapp.com/#/)
 
-* Ruby version
+## Technologies
 
-* System dependencies
+* Ruby on Rails
+* ActiveRecord
+* PostgreSQL
+* React
+* Redux
+* BCrypt
 
-* Configuration
+## Features
 
-* Database creation
+* Logged-in users are able to list tickets they own up on the SeatNerd
+marketplace. If not logged in, the sell button will open up a modal, prompting
+the user to log in to their account.
+* Users can find tickets to events by selecting the venue of their choice or 
+their team of choice. Alternatively, users can simply view an index of all the
+events available on SeatNerd.
 
-* Database initialization
+## Future Plans
 
-* How to run the test suite
+* Implement search
+* Allow users to update the price of their listing
+* Allow users to bookmark events
+* Give users event recommendations based on their favorite team and current
+location
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
