@@ -8,7 +8,9 @@ const EventTicketsIndexItem = ({ ticket }) => (
                 Section {ticket.section} · Row {ticket.row}
             </div>
             <div>
-                <button className="buy-button-ticket">${Math.trunc(ticket.price)}/ea</button>
+                <Link to={`/checkout/${ticket.id}`}>
+                    <button className="buy-button-ticket">${Math.trunc(ticket.price)}/ea</button>
+                </Link>
             </div>
         </li>
     </div>

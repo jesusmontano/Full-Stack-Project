@@ -1113,9 +1113,11 @@ var EventTicketsIndexItem = function EventTicketsIndexItem(_ref) {
   var ticket = _ref.ticket;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "event-tickets-index-item-li"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", ticket.section, " \xB7 Row ", ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", ticket.section, " \xB7 Row ", ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/checkout/".concat(ticket.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button-ticket"
-  }, "$", Math.trunc(ticket.price), "/ea"))));
+  }, "$", Math.trunc(ticket.price), "/ea")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (EventTicketsIndexItem);
