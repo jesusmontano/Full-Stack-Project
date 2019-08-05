@@ -2587,7 +2587,7 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.action(this.state).then(function () {
-        return _this3.props.history.push('/');
+        return _this3.props.history.push('/account');
       });
     }
   }, {
