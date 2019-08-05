@@ -7,6 +7,10 @@ class UpdatePriceTicketForm extends React.Component {
         this.state = this.props.ticket;
     }
 
+    componentDidMount() {
+        this.props.fetchTicket(this.props.match.params.ticketId);
+    }
+
     update(field) {
         return (e) => {
             this.setState({[field]: e.target.value});

@@ -701,6 +701,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 var AccountTicketItem = function AccountTicketItem(_ref) {
@@ -744,7 +746,13 @@ var AccountTicketItem = function AccountTicketItem(_ref) {
     className: "event-date"
   }, "Price: $", ticket.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button-top"
-  }, "Update Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/ticket/editprice/".concat(ticket.id),
+    style: {
+      textDecoration: 'none',
+      color: 'white'
+    }
+  }, "Update Price"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buy-button"
   }, "Remove")))));
 };
@@ -2559,6 +2567,11 @@ function (_React$Component) {
   }
 
   _createClass(UpdatePriceTicketForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchTicket(this.props.match.params.ticketId);
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;

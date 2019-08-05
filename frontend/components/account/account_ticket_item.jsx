@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AccountTicketItem = ({ticket, events, teams, venues}) => {
     debugger;
@@ -49,7 +50,8 @@ const AccountTicketItem = ({ticket, events, teams, venues}) => {
                 </div>
                 <div>
                     <div>
-                        <button className="buy-button-top">Update Price</button>
+                        <button className="buy-button-top"><Link to={`/ticket/editprice/${ticket.id}`} style={{ textDecoration: 'none', color: 'white' }}>Update Price</Link>
+                        </button>
                     </div>
                     <div>
                         <button className="buy-button">Remove</button>
