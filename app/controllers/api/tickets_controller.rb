@@ -1,4 +1,8 @@
 class Api::TicketsController < ApplicationController
+    # skip_before_action :verify_authenticity_token
+
+    ## skip_before_action wasn't here before, I addded it to be able to test on Postman
+
     def index
         @tickets = Ticket.all
     end
