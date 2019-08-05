@@ -16,3 +16,12 @@ const mapStateToProps = (state, ownProps) => {
 
     return { ticket, formType };
 };
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchTicket: id => dispatch(fetchTicket(id)),
+        action: ticket => dispatch(updateTicket(ticket))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateOwnerTicketForm);
