@@ -1593,9 +1593,14 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      var user = Object.assign({}, this.state);
-      this.props.processForm(user).then(this.props.closeModal);
+      var user = Object.assign({}, this.state); // this.props.processForm(user).then(this.props.closeModal);
+
+      this.props.processForm(user).then(function () {
+        return _this3.props.history.push("/account");
+      }).then(this.props.closeModal);
     }
   }, {
     key: "componentWillMount",
@@ -1605,7 +1610,7 @@ function (_React$Component) {
   }, {
     key: "handleGuestSubmit",
     value: function handleGuestSubmit(e) {
-      var _this3 = this;
+      var _this4 = this;
 
       e.preventDefault();
       this.props.demoUser({
@@ -1613,7 +1618,7 @@ function (_React$Component) {
         username: 'demo',
         password: 'password'
       }).then(function () {
-        return _this3.props.history.push("/account");
+        return _this4.props.history.push("/account");
       }).then(this.props.closeModal);
     }
   }, {
