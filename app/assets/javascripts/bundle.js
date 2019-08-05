@@ -2593,7 +2593,16 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.id));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.price,
+        onChange: this.update('price')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Update Price"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "The form for updating the price will go here. The ticket ID is: ", this.props.ticket.id));
     }
   }]);
 

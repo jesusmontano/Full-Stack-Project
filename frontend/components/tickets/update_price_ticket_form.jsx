@@ -26,8 +26,18 @@ class UpdatePriceTicketForm extends React.Component {
         return (
             <div>
                 Testing...
+                <form onSubmit={this.handleSubmit}>
+                    <label> Price
+                        <input 
+                            type="text"
+                            value={this.state.price}
+                            onChange={this.update('price')}/>
+                    </label>
+                    <input type="submit" value="Update Price"/>
+                </form>
                 <div>
-                    {this.state.id}
+                    The form for updating the price will go here.
+                    The ticket ID is: {this.props.ticket.id}
                 </div>
             </div>
         )
