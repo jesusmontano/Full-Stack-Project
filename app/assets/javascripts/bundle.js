@@ -2494,7 +2494,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     row: '',
     section: ''
   };
-  var ticket = state.entities[ownProps.match.params.ticketId] || defaultTicket;
+  var ticket = state.entities.tickets[ownProps.match.params.ticketId] || defaultTicket;
   var formType = 'Update Ticket';
   return {
     ticket: ticket,
@@ -2593,8 +2593,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.ticket.id));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.id));
     }
   }]);
 

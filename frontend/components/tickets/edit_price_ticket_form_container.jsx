@@ -11,7 +11,7 @@ const mapStateToProps = ( state, ownProps ) => {
         row: '',
         section: ''
     };
-    const ticket = state.entities[ownProps.match.params.ticketId] || defaultTicket;
+    const ticket = state.entities.tickets[ownProps.match.params.ticketId] || defaultTicket;
     const formType = 'Update Ticket';
 
     return { ticket, formType };

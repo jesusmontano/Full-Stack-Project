@@ -23,12 +23,11 @@ class UpdatePriceTicketForm extends React.Component {
     }
 
     render() {
-        debugger;
         return (
             <div>
                 Testing...
                 <div>
-                    {this.props.ticket.id}
+                    {this.state.id}
                 </div>
             </div>
         )
