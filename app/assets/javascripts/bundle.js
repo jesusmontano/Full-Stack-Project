@@ -489,6 +489,10 @@ var App = function App() {
     exact: true,
     path: "/account",
     component: _account_account_container__WEBPACK_IMPORTED_MODULE_14__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__["Route"], {
+    exact: true,
+    path: "/ticket/editprice/:ticketId",
+    component: _tickets_edit_price_ticket_form_container__WEBPACK_IMPORTED_MODULE_15__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/jesus-montano-795311138/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2576,7 +2580,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...");
+      debugger;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.ticket.id));
     }
   }]);
 

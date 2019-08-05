@@ -40,7 +40,7 @@ const App = () => (
         <Route exact path="/events/:eventId/tickets" component={EventTicketsIndexContainer} />
         <Route exact path="/sell" component={CreateTicketFormContainer} />
         <Route exact path="/account" component={AccountContainer} />
-        {/* <Route exact path="/ticket/editprice/:ticketId" component = {EditPriceTicketFormContainer} /> */}
+        <Route exact path="/ticket/editprice/:ticketId" component = {EditPriceTicketFormContainer} />
         <footer>
             <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
                 <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
