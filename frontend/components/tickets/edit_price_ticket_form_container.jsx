@@ -1,6 +1,5 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { UpdatePriceTicketForm } from './update_price_ticket_form';
+import UpdatePriceTicketForm from './update_price_ticket_form.jsx';
 import { fetchTicket, updateTicket } from '../../actions/ticket_actions';
 
 const mapStateToProps = ( state, ownProps ) => {
