@@ -22,7 +22,7 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -42,7 +42,7 @@ const App = () => (
         <Route exact path="/sell" component={CreateTicketFormContainer} />
         <Route exact path="/account" component={AccountContainer} />
         <Route exact path="/ticket/editprice/:ticketId" component = {EditPriceTicketFormContainer} />
-        <Route exact path="/checkout/:ticketId" component = {EditOwnerTicketFormContainer} />
+        <ProtectedRoute exact path="/checkout/:ticketId" component = {EditOwnerTicketFormContainer} />
         <footer>
             <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
                 <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
