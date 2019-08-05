@@ -15,7 +15,7 @@ const mapStateToProps = ({ errors }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        processForm: (user) => dispatch(signup(user)), // this is supposed to be dispatch(signup(user))
+        processForm: (user) => dispatch(signup(user)),
         otherForm: (
             <button className="other-form-link" onClick={() => dispatch(openModal('login'))}>
               Log in here

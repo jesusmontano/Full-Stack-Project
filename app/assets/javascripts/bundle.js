@@ -1732,7 +1732,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     processForm: function processForm(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["signup"])(user));
     },
-    // this is supposed to be dispatch(signup(user))
     otherForm: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "other-form-link",
       onClick: function onClick() {
