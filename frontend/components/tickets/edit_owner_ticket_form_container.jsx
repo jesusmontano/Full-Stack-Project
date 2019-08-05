@@ -13,8 +13,9 @@ const mapStateToProps = (state, ownProps) => {
     };
     const ticket = state.entities.tickets[ownProps.match.params.ticketId] || defaultTicket;
     const formType = 'Buy Ticket';
+    const currentUserID = state.session.id || null;
 
-    return { ticket, formType };
+    return { ticket, formType, currentUserID };
 };
 
 const mapDispatchToProps = dispatch => {
