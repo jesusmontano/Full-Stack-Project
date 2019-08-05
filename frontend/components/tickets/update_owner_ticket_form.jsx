@@ -28,6 +28,11 @@ class UpdateOwnerTicketForm extends React.Component {
                 Please work...
                 This is the currentUserID: 
                 {this.props.currentUserID}
+                <form>
+                    <label> Are you sure you want to buy this ticket?
+                            <input type="submit" value="Buy This Ticket" />
+                    </label>
+                </form>
             </div>
         )
     }

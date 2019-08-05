@@ -2648,7 +2648,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Please work... This is the currentUserID:", this.props.currentUserID);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Please work... This is the currentUserID:", this.props.currentUserID, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Are you sure you want to buy this ticket?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Buy This Ticket"
+      }))));
     }
   }]);
 
