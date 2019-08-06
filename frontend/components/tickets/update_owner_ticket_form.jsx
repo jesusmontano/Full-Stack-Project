@@ -75,7 +75,7 @@ class UpdateOwnerTicketForm extends React.Component {
                 <br/>
                 <form onSubmit={this.handleSubmit}>
                             <input type="hidden" value={this.props.currentUserID}/>
-                            <input className="checkout-button" type="submit" value="Complete Order" onClick={this.update('owner_id')}/>
+                            <input className="checkout-button" type="submit" value="Buy Ticket" onClick={this.update('owner_id')}/>
                 </form>
             </div>
         )

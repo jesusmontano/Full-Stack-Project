@@ -744,11 +744,16 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 25px;
+  border: 1px solid grey;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: .75rem;
 }
 
 .checkout-form-header {
-  margin-top: 25px;
   font-weight: bolder;
+  margin-top: 10px;
 }
 
 .checkout-button {

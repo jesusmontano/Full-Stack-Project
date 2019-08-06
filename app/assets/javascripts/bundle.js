@@ -2780,7 +2780,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "checkout-button",
         type: "submit",
-        value: "Complete Order",
+        value: "Buy Ticket",
         onClick: this.update('owner_id')
       })));
     }
