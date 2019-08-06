@@ -54,23 +54,28 @@ class UpdateOwnerTicketForm extends React.Component {
         debugger;
 
         return (
-            <div>
-                <div>
+            <div className="checkout-form">
+                <h3 className="checkout-form-header">
                     {awayTeam} at {homeTeam}
-                </div>
+                </h3>
+                <br/>
                 <div>
                     {event.date} - {venueName}, {venue.city}, {venue.state}
                 </div>
+                <br/>
                 <div>
                     Section {this.props.ticket.section} · Row {this.props.ticket.row}
                 </div>
-                <label>Order Summary</label>
+                <br/>
+                <label className="order-summary">Order Summary</label>
+                <br/>
                 <div>
                     Total ${this.props.ticket.price}
                 </div>
+                <br/>
                 <form onSubmit={this.handleSubmit}>
                             <input type="hidden" value={this.props.currentUserID}/>
-                            <input type="submit" value="Complete Order" onClick={this.update('owner_id')}/>
+                            <input className="checkout-button" type="submit" value="Complete Order" onClick={this.update('owner_id')}/>
                 </form>
             </div>
         )

@@ -2766,12 +2766,19 @@ function (_React$Component) {
       var homeTeam = this.props.teams[event.home_team_id].name;
       var awayTeam = this.props.teams[event.away_team_id].name;
       debugger;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, awayTeam, " at ", homeTeam), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, event.date, " - ", venueName, ", ", venue.city, ", ", venue.state), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", this.props.ticket.section, " \xB7 Row ", this.props.ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Order Summary"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total $", this.props.ticket.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "checkout-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "checkout-form-header"
+      }, awayTeam, " at ", homeTeam), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, event.date, " - ", venueName, ", ", venue.city, ", ", venue.state), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", this.props.ticket.section, " \xB7 Row ", this.props.ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "order-summary"
+      }, "Order Summary"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total $", this.props.ticket.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "hidden",
         value: this.props.currentUserID
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "checkout-button",
         type: "submit",
         value: "Complete Order",
         onClick: this.update('owner_id')
