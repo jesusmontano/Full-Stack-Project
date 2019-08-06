@@ -2619,7 +2619,17 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UpdateOwnerTicketForm).call(this, props));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    _this.state = _this.props.ticket;
+    _this.state = {
+      event_id: _this.props.ticket.event_id,
+      id: _this.props.ticket.id,
+      owner_id: _this.props.owner_id,
+      price: _this.props.ticket.price,
+      row: _this.props.ticket.row,
+      section: _this.props.ticket.section,
+      venue_id: _this.props.ticket.venue_id
+    };
+    debugger; // this.state = this.props.ticket;
+
     return _this;
   }
 
@@ -2634,7 +2644,31 @@ function (_React$Component) {
       var _this2 = this;
 
       return function (e) {
-        _this2.setState(_defineProperty({}, field, e.target.value));
+        _this2.setState(_defineProperty({}, field, _this2.props.currentUserID));
+
+        _this2.setState({
+          event_id: _this2.props.ticket.event_id
+        });
+
+        _this2.setState({
+          id: _this2.props.ticket.id
+        });
+
+        _this2.setState({
+          price: _this2.props.ticket.price
+        });
+
+        _this2.setState({
+          row: _this2.props.ticket.row
+        });
+
+        _this2.setState({
+          section: _this2.props.ticket.section
+        });
+
+        _this2.setState({
+          venue_id: _this2.props.ticket.venue_id
+        });
       };
     }
   }, {
@@ -2642,7 +2676,18 @@ function (_React$Component) {
     value: function handleSubmit(e) {
       var _this3 = this;
 
-      e.preventDefault();
+      e.preventDefault(); // debugger;
+      // this.setState({ event_id: this.props.ticket.event_id });
+      // debugger;
+      // this.setState({ id: this.props.ticket.id });
+      // this.setState({ owner_id: this.props.currentUserID});
+      // this.setState({ price: this.props.ticket.price });
+      // this.setState({ row: this.props.ticket.row });
+      // this.setState({ section: this.props.ticket.section });
+      // this.setState({ venue_id: this.props.ticket.venue_id });
+      // debugger;
+
+      debugger;
       this.props.action(this.state).then(function () {
         return _this3.props.history.push('/account');
       });
@@ -2650,9 +2695,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Please work... This is the currentUserID:", this.props.currentUserID, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Are you sure you want to buy this ticket?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This is the currentUserID:", this.props.currentUserID, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Are you sure you want to buy this ticket?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "hidden",
+        value: this.props.currentUserID
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        value: "Buy This Ticket"
+        value: "Complete Order",
+        onClick: this.update('owner_id')
       }))));
     }
   }]);
