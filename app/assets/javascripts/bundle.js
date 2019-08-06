@@ -495,7 +495,7 @@ var App = function App() {
     exact: true,
     path: "/ticket/editprice/:ticketId",
     component: _tickets_edit_price_ticket_form_container__WEBPACK_IMPORTED_MODULE_15__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_18__["ProtectedRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__["Route"], {
     exact: true,
     path: "/checkout/:ticketId",
     component: _tickets_edit_owner_ticket_form_container__WEBPACK_IMPORTED_MODULE_16__["default"]
@@ -2628,8 +2628,6 @@ function (_React$Component) {
       section: _this.props.ticket.section,
       venue_id: _this.props.ticket.venue_id
     };
-    debugger; // this.state = this.props.ticket;
-
     return _this;
   }
 

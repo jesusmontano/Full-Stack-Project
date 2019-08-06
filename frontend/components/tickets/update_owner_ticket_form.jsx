@@ -13,8 +13,6 @@ class UpdateOwnerTicketForm extends React.Component {
             section: this.props.ticket.section,
             venue_id: this.props.ticket.venue_id
         }
-        debugger;
-        // this.state = this.props.ticket;
     }
 
     componentDidMount() {
