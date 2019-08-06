@@ -4,6 +4,7 @@ import { fetchTickets } from '../../actions/ticket_actions';
 import EventTicketsIndex from './event_tickets_index';
 import { requestVenues } from '../../actions/venue_actions';
 import { requestTeams } from '../../actions/team_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const eventId = Number(ownProps.match.params.eventId);
@@ -25,7 +26,9 @@ const mapDispatchToProps = dispatch => ({
     requestEvents: () => dispatch(requestEvents()),
     fetchTickets: () => dispatch(fetchTickets()),
     requestTeams: () => dispatch(requestTeams()),
-    requestVenues: () => dispatch(requestVenues())
+    requestVenues: () => dispatch(requestVenues()),
+    openModal: (modal) => dispatch(openModal(modal)),
+    closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventTicketsIndex);

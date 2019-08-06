@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const EventTicketsIndexItem = ({ ticket }) => (
+const EventTicketsIndexItem = ({ ticket, props }) => (
     <div>
         <li className="event-tickets-index-item-li">
             <div>

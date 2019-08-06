@@ -33,7 +33,7 @@ class EventTicketsIndex extends React.Component {
                 </label>
                 <ul>
                     {this.props.tickets.map(ticket => (
-                        <EventTicketsIndexItem ticket={ticket} key={ticket.id}/>
+                        <EventTicketsIndexItem ticket={ticket} key={ticket.id} props={this.props}/>
                     ))}
                 </ul>
             </div>

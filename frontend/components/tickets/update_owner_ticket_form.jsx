@@ -17,6 +17,9 @@ class UpdateOwnerTicketForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchTicket(this.props.match.params.ticketId);
+        this.props.requestVenues();
+        this.props.requestTeams();
+        this.props.requestEvents();
     }
 
     update(field) {
@@ -43,15 +46,31 @@ class UpdateOwnerTicketForm extends React.Component {
     }
 
     render() {
+        const venueName = this.props.venues[this.props.ticket.venue_id].name;
+        const venue = this.props.venues[this.props.ticket.venue_id];
+        const event = this.props.events[this.props.ticket.event_id];
+        const homeTeam = this.props.teams[event.home_team_id].name;
+        const awayTeam = this.props.teams[event.away_team_id].name;
+        debugger;
+
         return (
             <div>
-                This is the ticketId: 
-                {this.props.ticket.id}
+                <div>
+                    {awayTeam} at {homeTeam}
+                </div>
+                <div>
+                    {event.date} - {venueName}, {venue.city}, {venue.state}
+                </div>
+                <div>
+                    Section {this.props.ticket.section} · Row {this.props.ticket.row}
+                </div>
+                <label>Order Summary</label>
+                <div>
+                    Total ${this.props.ticket.price}
+                </div>
                 <form onSubmit={this.handleSubmit}>
-                    <label> Are you sure you want to buy this ticket?
                             <input type="hidden" value={this.props.currentUserID}/>
                             <input type="submit" value="Complete Order" onClick={this.update('owner_id')}/>
-                    </label>
                 </form>
             </div>
         )
