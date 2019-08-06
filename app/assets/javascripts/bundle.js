@@ -2585,6 +2585,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _update_price_ticket_form_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update_price_ticket_form.jsx */ "./frontend/components/tickets/update_price_ticket_form.jsx");
 /* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
+/* harmony import */ var _actions_venue_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/venue_actions */ "./frontend/actions/venue_actions.js");
+/* harmony import */ var _actions_team_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/team_actions */ "./frontend/actions/team_actions.js");
+/* harmony import */ var _actions_event_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/event_actions */ "./frontend/actions/event_actions.js");
+
+
+
 
 
 
@@ -2600,9 +2606,15 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   };
   var ticket = state.entities.tickets[ownProps.match.params.ticketId] || defaultTicket;
   var formType = 'Update Ticket';
+  var events = state.entities.events;
+  var teams = state.entities.teams;
+  var venues = state.entities.venues;
   return {
     ticket: ticket,
-    formType: formType
+    formType: formType,
+    events: events,
+    teams: teams,
+    venues: venues
   };
 };
 
@@ -2613,6 +2625,15 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     action: function action(ticket) {
       return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__["updateTicket"])(ticket));
+    },
+    requestVenues: function requestVenues() {
+      return dispatch(Object(_actions_venue_actions__WEBPACK_IMPORTED_MODULE_3__["requestVenues"])());
+    },
+    requestTeams: function requestTeams() {
+      return dispatch(Object(_actions_team_actions__WEBPACK_IMPORTED_MODULE_4__["requestTeams"])());
+    },
+    requestEvents: function requestEvents() {
+      return dispatch(Object(_actions_event_actions__WEBPACK_IMPORTED_MODULE_5__["requestEvents"])());
     }
   };
 };
@@ -2841,7 +2862,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Testing...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "List on SeatNerd", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",

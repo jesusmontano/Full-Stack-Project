@@ -25,7 +25,7 @@ class UpdatePriceTicketForm extends React.Component {
     render() {
         return (
             <div>
-                Testing...
+                List on SeatNerd
                 <form onSubmit={this.handleSubmit}>
                     <label> Price
                         <input 
