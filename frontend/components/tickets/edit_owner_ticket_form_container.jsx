@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import UpdateOwnerTicketForm from './update_owner_ticket_form.jsx';
 import { fetchTicket, updateTicket } from '../../actions/ticket_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const defaultTicket = {
@@ -21,7 +22,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchTicket: id => dispatch(fetchTicket(id)),
-        action: ticket => dispatch(updateTicket(ticket))
+        action: ticket => dispatch(updateTicket(ticket)),
+        openModal: (modal) => dispatch(openModal(modal)),
+        closeModal: () => dispatch(closeModal())
     };
 };
 

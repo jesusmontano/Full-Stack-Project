@@ -2488,6 +2488,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _update_owner_ticket_form_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update_owner_ticket_form.jsx */ "./frontend/components/tickets/update_owner_ticket_form.jsx");
 /* harmony import */ var _actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/ticket_actions */ "./frontend/actions/ticket_actions.js");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+
 
 
 
@@ -2518,6 +2520,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     action: function action(ticket) {
       return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_2__["updateTicket"])(ticket));
+    },
+    openModal: function openModal(modal) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])(modal));
+    },
+    closeModal: function closeModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
     }
   };
 };
