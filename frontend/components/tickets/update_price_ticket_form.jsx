@@ -34,28 +34,34 @@ class UpdatePriceTicketForm extends React.Component {
         debugger;
 
         return (
-            <div>
-                <label>
+            <div className="update-price-form">
+                <h3 className="update-price-form-header">
                     List on SeatNerd
-                </label>
+                </h3>
+                <br/>
                 <div>
                     {awayTeam} at {homeTeam}
                 </div>
+                <br/>
                 <div>
                     {event.date} - {venueName}, {venue.city}, {venue.state}
                 </div>
+                <br/>
                 <div>
                     Section {this.props.ticket.section} · Row {this.props.ticket.row}
                 </div>
+                <br/>
                 <div>
                     Ticket ID: {this.props.ticket.id}
                 </div>
-                <form onSubmit={this.handleSubmit}>
-                        <input 
+                <br/>
+                <form className="update-price-user-inputs" onSubmit={this.handleSubmit}>
+                        <input className="create-ticket-input"
                             type="text"
                             value={this.state.price}
                             onChange={this.update('price')}/>
-                    <input type="submit" value="Update Price"/>
+                        <br/>
+                        <input className="update-price-button" type="submit" value="Update Price"/>
                 </form>
             </div>
         )

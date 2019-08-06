@@ -773,3 +773,39 @@ footer {
 .order-summary {
   font-weight: bolder;
 }
+
+.update-price-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border: thin solid #dad7d7;;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: .75rem;
+}
+
+.update-price-form-header {
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.update-price-button {
+  border-radius: 8px;
+    background: #5caf0b;
+    font: 400 16px proxima-nova,Proxima Nova,Helvetica Neue,Arial,Helvetica;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    width: 160px;
+    outline: none;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.update-price-user-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
