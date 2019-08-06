@@ -33,18 +33,13 @@ class UpdateOwnerTicketForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger;
-        // this.setState({ event_id: this.props.ticket.event_id });
-        // debugger;
-        // this.setState({ id: this.props.ticket.id });
-        // this.setState({ owner_id: this.props.currentUserID});
-        // this.setState({ price: this.props.ticket.price });
-        // this.setState({ row: this.props.ticket.row });
-        // this.setState({ section: this.props.ticket.section });
-        // this.setState({ venue_id: this.props.ticket.venue_id });
-        // debugger;
         debugger;
-        this.props.action(this.state).then(() => this.props.history.push('/account'));
+        if (this.props.currentUserID === null) {
+            this.props.openModal('login')
+        } else {
+            this.props.action(this.state).then(() => this.props.history.push('/account'));
+        }
+        // this.props.action(this.state).then(() => this.props.history.push('/account'));
     }
 
     render() {
