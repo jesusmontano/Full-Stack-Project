@@ -745,7 +745,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-top: 25px;
-  border: 1px solid grey;
+  border: thin solid #dad7d7;;
   margin-right: 20%;
   margin-left: 20%;
   border-radius: .75rem;
