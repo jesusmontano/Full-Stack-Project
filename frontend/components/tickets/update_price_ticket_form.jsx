@@ -9,6 +9,9 @@ class UpdatePriceTicketForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchTicket(this.props.match.params.ticketId);
+        this.props.requestVenues();
+        this.props.requestTeams();
+        this.props.requestEvents();
     }
 
     update(field) {
@@ -23,22 +26,37 @@ class UpdatePriceTicketForm extends React.Component {
     }
 
     render() {
+        const venueName = this.props.venues[this.props.ticket.venue_id].name;
+        const venue = this.props.venues[this.props.ticket.venue_id];
+        const event = this.props.events[this.props.ticket.event_id];
+        const homeTeam = this.props.teams[event.home_team_id].name;
+        const awayTeam = this.props.teams[event.away_team_id].name;
+        debugger;
+
         return (
             <div>
-                List on SeatNerd
+                <label>
+                    List on SeatNerd
+                </label>
+                <div>
+                    {awayTeam} at {homeTeam}
+                </div>
+                <div>
+                    {event.date} - {venueName}, {venue.city}, {venue.state}
+                </div>
+                <div>
+                    Section {this.props.ticket.section} · Row {this.props.ticket.row}
+                </div>
+                <div>
+                    Ticket ID: {this.props.ticket.id}
+                </div>
                 <form onSubmit={this.handleSubmit}>
-                    <label> Price
                         <input 
                             type="text"
                             value={this.state.price}
                             onChange={this.update('price')}/>
-                    </label>
                     <input type="submit" value="Update Price"/>
                 </form>
-                <div>
-                    The form for updating the price will go here.
-                    The ticket ID is: {this.props.ticket.id}
-                </div>
             </div>
         )
     }

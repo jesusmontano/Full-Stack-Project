@@ -2839,6 +2839,9 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchTicket(this.props.match.params.ticketId);
+      this.props.requestVenues();
+      this.props.requestTeams();
+      this.props.requestEvents();
     }
   }, {
     key: "update",
@@ -2862,16 +2865,22 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "List on SeatNerd", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      var venueName = this.props.venues[this.props.ticket.venue_id].name;
+      var venue = this.props.venues[this.props.ticket.venue_id];
+      var event = this.props.events[this.props.ticket.event_id];
+      var homeTeam = this.props.teams[event.home_team_id].name;
+      var awayTeam = this.props.teams[event.away_team_id].name;
+      debugger;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "List on SeatNerd"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, awayTeam, " at ", homeTeam), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, event.date, " - ", venueName, ", ", venue.city, ", ", venue.state), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Section ", this.props.ticket.section, " \xB7 Row ", this.props.ticket.row), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Ticket ID: ", this.props.ticket.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.price,
         onChange: this.update('price')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Update Price"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "The form for updating the price will go here. The ticket ID is: ", this.props.ticket.id));
+      })));
     }
   }]);
 
