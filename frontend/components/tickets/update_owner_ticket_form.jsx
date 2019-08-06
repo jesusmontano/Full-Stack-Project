@@ -45,8 +45,8 @@ class UpdateOwnerTicketForm extends React.Component {
     render() {
         return (
             <div>
-                This is the currentUserID: 
-                {this.props.currentUserID}
+                This is the ticketId: 
+                {this.props.ticket.id}
                 <form onSubmit={this.handleSubmit}>
                     <label> Are you sure you want to buy this ticket?
                             <input type="hidden" value={this.props.currentUserID}/>
