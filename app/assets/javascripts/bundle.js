@@ -1461,7 +1461,7 @@ function (_React$Component) {
         results = this.props.results.map(function (result) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
             className: _this2.state.loggedIn ? "result-li" : "result-li-logout",
-            key: result.ticker
+            key: result.id
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
             to: "/teams/".concat(result.id),
             id: "search-link"
@@ -1469,6 +1469,19 @@ function (_React$Component) {
             id: "search-result-company"
           }, result.name)));
         });
+      }
+
+      if (this.props.results.length === 0 && this.state.value !== '') {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+          className: "search-form"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          onClick: this.handleClick,
+          onChange: this.handleSearch,
+          type: "search",
+          placeholder: "Search by team",
+          className: "search-input",
+          value: this.state.value
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "No results found.")));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1479,8 +1492,8 @@ function (_React$Component) {
         onClick: this.handleClick,
         onChange: this.handleSearch,
         type: "search",
-        placeholder: "Search",
-        className: this.state.loggedIn ? "search-input-black" : "search-input",
+        placeholder: "Search by team",
+        className: "search-input",
         value: this.state.value
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: this.state.loggedIn ? "result-drop-ul" : "result-drop-ul-logout"
