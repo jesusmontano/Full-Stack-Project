@@ -28,7 +28,7 @@ class Search extends React.Component {
             results = this.props.results.map(result => {
                 return (
                     <li className="result-li" key={result.id}>
-                        <Link to={`/teams/${result.id}`} id="search-link">
+                        <Link to={`/teams/${result.id}`} style={{ textDecoration: 'none', color: 'black' }} id="search-link"> 
                             <div id="search-result-team">{result.name}</div>
                         </Link>
                     </li>

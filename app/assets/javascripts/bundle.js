@@ -1462,6 +1462,10 @@ function (_React$Component) {
             key: result.id
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
             to: "/teams/".concat(result.id),
+            style: {
+              textDecoration: 'none',
+              color: 'black'
+            },
             id: "search-link"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             id: "search-result-team"
