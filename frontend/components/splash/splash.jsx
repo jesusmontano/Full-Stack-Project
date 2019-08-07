@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import { Link } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -40,6 +41,9 @@ class Splash extends React.Component {
         <div className="intro-splash-tagline">
             <p>Life's an event.</p>
             <p>We have the tickets.</p>
+        </div>
+        <div>
+            <SearchContainer />
         </div>
     </header>)}
 };
