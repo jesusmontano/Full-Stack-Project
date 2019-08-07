@@ -1453,20 +1453,18 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var results;
 
       if (this.props.results.length && this.state.value !== '') {
         results = this.props.results.map(function (result) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-            className: _this2.state.loggedIn ? "result-li" : "result-li-logout",
+            className: "result-li",
             key: result.id
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
             to: "/teams/".concat(result.id),
             id: "search-link"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-            id: "search-result-company"
+            id: "search-result-team"
           }, result.name)));
         });
       }
@@ -1481,11 +1479,13 @@ function (_React$Component) {
           placeholder: "Search by team",
           className: "search-input",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "No results found.")));
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "result-li"
+        }, "No results found")));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: this.state.loggedIn ? "search-black" : "default-searchbar"
+        className: "default-searchbar-div"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "search-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1496,7 +1496,7 @@ function (_React$Component) {
         className: "search-input",
         value: this.state.value
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: this.state.loggedIn ? "result-drop-ul" : "result-drop-ul-logout"
+        className: "result-drop-ul"
       }, results));
     }
   }]);
