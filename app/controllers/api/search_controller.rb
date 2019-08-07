@@ -3,8 +3,8 @@ class Api::SearchController < ApplicationController
     def search
         @search = Team.where(
             "name ILIKE ?",
-            "%#{params["str"]}%",
-            "%#{params["str"]}%" ## might have to remove this one
+            "%#{params["str"]}%"
+            # "%#{params["str"]}%" ## might have to remove this one
         )
         render json: @search
     end

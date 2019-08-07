@@ -28,9 +28,9 @@ class Search extends React.Component {
             results = this.props.results.map(result => {
                 return (
                     <li className={this.state.loggedIn ? "result-li" : "result-li-logout"} key={result.ticker}>
-                        <Link to={`/companies/${result.ticker}`} id="search-link">
-                            <div id="search-result-ticker">{result.ticker}</div>
-                            <div id="search-result-company">{result.company_name}</div>
+                        <Link to={`/teams/${result.id}`} id="search-link">
+                            {/* <div id="search-result-ticker">{result.ticker}</div> */}
+                            <div id="search-result-company">{result.name}</div>
                         </Link>
                     </li>
                 )
@@ -38,7 +38,7 @@ class Search extends React.Component {
         }
         return (
             <div className={this.state.loggedIn ? "search-black" : "default-searchbar"}>
-                <img src={this.state.loggedIn ? window.images.magwhite : window.images.maggrey} className="magwhite" />
+                {/* <img src={this.state.loggedIn ? window.images.magwhite : window.images.maggrey} className="magwhite" /> */}
                 <form className="search-form">
                     <input onClick={this.handleClick}
                         onChange={this.handleSearch}
