@@ -46,7 +46,7 @@ class Search extends React.Component {
                             className="search-input"
                             value={this.state.value} />
                     </form>
-                    <ul>
+                    <ul className="result-drop-ul">
                         <li className="result-li">
                             No results found
                         </li>

@@ -31,9 +31,7 @@ class Splash extends React.Component {
                     <button className="index-button"><Link to={"/teams"} style={{ textDecoration: 'none', color: 'white' }}>Teams</Link></button>
                     <button className="index-button"><Link to={"/events"} style={{ textDecoration: 'none', color: 'white' }}>Events</Link></button>
                     <button className="index-button"><Link to={"/venues"} style={{ textDecoration: 'none', color: 'white' }}>Venues</Link></button>
-                    {/* <button className="index-button" onClick={this.handleClick}><Link to={"/sell"} style={{ textDecoration: 'none', color: 'white' }}>Sell</Link></button> */}
                     <button className="index-button" onClick={this.handleClick}>Sell</button>
-
                 </div>
             </div>
             <GreetingContainer />
@@ -42,7 +40,7 @@ class Splash extends React.Component {
             <p>Life's an event.</p>
             <p>We have the tickets.</p>
         </div>
-        <div>
+        <div className="nav-bar-search-bar">
             <SearchContainer />
         </div>
     </header>)}

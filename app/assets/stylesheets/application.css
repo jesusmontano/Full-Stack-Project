@@ -811,7 +811,7 @@ footer {
 }
 
 .search-input {
-  width: 50%;
+  width: 460px;
     height: 30px;
     border-radius: 0.625rem;
     border-style: solid;
@@ -822,6 +822,7 @@ footer {
     padding-left: 0.9375rem;
     font-size: medium;
     color: black;
+    padding-right: 0.9375rem
 }
 
  .search-input:focus {
@@ -832,5 +833,22 @@ footer {
 
  .result-li {
     margin-left: 19px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: medium;
  }
+
+.nav-bar-search-bar {
+  position: absolute;
+  top: 325px;
+  left: 120px;
+}
+
+.result-drop-ul {
+  background: white;
+  border-radius: .625rem;
+  border-color: #a8bac9;
+   box-shadow: 0 0 10px #a8bac9;
+}

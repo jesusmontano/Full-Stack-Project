@@ -1483,7 +1483,9 @@ function (_React$Component) {
           placeholder: "Search by team",
           className: "search-input",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "result-li"
         }, "No results found")));
       }
@@ -2091,7 +2093,9 @@ function (_React$Component) {
         onClick: this.handleClick
       }, "Sell"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "intro-splash-tagline"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_search_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Life's an event."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We have the tickets.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav-bar-search-bar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_search_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
     }
   }]);
 
