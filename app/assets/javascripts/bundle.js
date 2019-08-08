@@ -3144,10 +3144,10 @@ var TopTeams =
 function (_React$Component) {
   _inherits(TopTeams, _React$Component);
 
-  function TopTeams() {
+  function TopTeams(props) {
     _classCallCheck(this, TopTeams);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TopTeams).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(TopTeams).call(this, props));
   }
 
   _createClass(TopTeams, [{
@@ -3158,6 +3158,24 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var lakers = this.props.teams.filter(function (team) {
+        return team.name === 'Los Angeles Lakers';
+      });
+      var warriors = this.props.teams.filter(function (team) {
+        return team.name === 'Golden State Warriors';
+      });
+      var celtics = this.props.teams.filter(function (team) {
+        return team.name === 'Boston Celtics';
+      });
+      var knicks = this.props.teams.filter(function (team) {
+        return team.name === 'New York Knicks';
+      });
+      debugger;
+
+      if (this.props.teams.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "top-teams-div"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -3171,7 +3189,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/19',
+        to: "/teams/".concat(lakers[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3183,7 +3201,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/20',
+        to: "/teams/".concat(warriors[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3195,7 +3213,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/24',
+        to: "/teams/".concat(celtics[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3207,7 +3225,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/teams/21',
+        to: "/teams/".concat(knicks[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3239,6 +3257,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    teams: Object.values(state.entities.teams)
+  };
+};
+
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     requestTeams: function requestTeams() {
@@ -3247,7 +3271,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(null, mapDispatchToProps)(_top_teams__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_top_teams__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
