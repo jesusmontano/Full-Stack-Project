@@ -30,7 +30,7 @@ class TopVenues extends React.Component {
         if (this.props.venues.length === 0) {
             return (
                 <div>
-                    Loading venues...
+                
                 </div>
             )
         }

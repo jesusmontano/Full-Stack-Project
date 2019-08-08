@@ -1427,6 +1427,7 @@ function (_React$Component) {
       loggedIn: _this.props.loggedIn
     };
     _this.handleSearch = _this.handleSearch.bind(_assertThisInitialized(_this));
+    _this.handleResultClick = _this.handleResultClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1445,15 +1446,27 @@ function (_React$Component) {
       e.preventDefault();
     }
   }, {
+    key: "handleResultClick",
+    value: function handleResultClick(e) {
+      e.preventDefault();
+      this.setState({
+        value: ''
+      });
+      debugger;
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var results;
 
       if (this.props.results.length && this.state.value !== '') {
         results = this.props.results.map(function (result) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
             className: "result-li",
-            key: result.id
+            key: result.id,
+            onClick: _this2.handleResultClick
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
             to: "/teams/".concat(result.id),
             style: {
@@ -1482,6 +1495,21 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "result-li"
         }, "No results found")));
+      }
+
+      if (this.props.results.length > 0 && this.state.value === '') {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+          className: "search-form"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          onClick: this.handleClick,
+          onChange: this.handleSearch,
+          type: "search",
+          placeholder: "Search by team",
+          className: "search-input",
+          value: this.state.value
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3173,7 +3201,7 @@ function (_React$Component) {
       debugger;
 
       if (this.props.teams.length === 0) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading teams...");
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3365,7 +3393,7 @@ function (_React$Component) {
       });
 
       if (this.props.venues.length === 0) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading venues...");
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

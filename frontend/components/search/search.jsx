@@ -9,7 +9,8 @@ class Search extends React.Component {
             value: '',
             loggedIn: this.props.loggedIn
         }
-        this.handleSearch = this.handleSearch.bind(this)
+        this.handleSearch = this.handleSearch.bind(this);
+        this.handleResultClick = this.handleResultClick.bind(this);
     }
 
     handleSearch(e) {
@@ -22,13 +23,19 @@ class Search extends React.Component {
         e.preventDefault();
     }
 
+    handleResultClick(e) {
+        e.preventDefault();
+        this.setState({ value: '' });
+        debugger;
+    }
+
     render() {
         let results
         if (this.props.results.length && this.state.value !== '') {
             results = this.props.results.map(result => {
                 return (
-                    <li className="result-li" key={result.id}>
-                        <Link to={`/teams/${result.id}`} style={{ textDecoration: 'none', color: 'black' }} id="search-link"> 
+                    <li className="result-li" key={result.id} onClick={this.handleResultClick}>
+                        <Link to={`/teams/${result.id}`} style={{ textDecoration: 'none', color: 'black' }} id="search-link">
                             <div id="search-result-team">{result.name}</div>
                         </Link>
                     </li>
@@ -50,6 +57,24 @@ class Search extends React.Component {
                         <li className="result-li">
                             No results found
                         </li>
+                    </ul>
+                </div>
+            )
+        }
+
+        if (this.props.results.length > 0 && this.state.value === '') {
+            return (
+                <div>
+                    <form className="search-form">
+                        <input onClick={this.handleClick}
+                            onChange={this.handleSearch}
+                            type="search" placeholder="Search by team"
+                            className="search-input"
+                            value={this.state.value} />
+                    </form>
+                    <ul className="result-drop-ul">
+                        {/* <li className="result-li">
+                        </li> */}
                     </ul>
                 </div>
             )
