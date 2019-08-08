@@ -41,7 +41,7 @@ class TopVenues extends React.Component {
                 <ul className="top-teams-list">
                     <li className="top-teams-list-item" >
                         {/* <div className="staples-div"> */}
-                        <Link to={'/venues/17'}>
+                        <Link to={`/venues/${staples[0].id}`}>
                             <div className="staples-div">
                             </div>
                         </Link>
@@ -51,7 +51,7 @@ class TopVenues extends React.Component {
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <Link to={'/venues/18'}>
+                        <Link to={`/venues/${oracle[0].id}`}>
                             <div className="oracle-div">
                             </div>
                         </Link>
@@ -60,7 +60,7 @@ class TopVenues extends React.Component {
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <Link to={'/venues/21'}>
+                        <Link to={`/venues/${tdGarden[0].id}`}>
                             <div className="td-garden-div">
                             </div>
                         </Link>
@@ -69,7 +69,7 @@ class TopVenues extends React.Component {
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <Link to={'/venues/20'}>
+                        <Link to={`/venues/${barclays[0].id}`}>
                             <div className="barclays-div">
                             </div>
                         </Link>

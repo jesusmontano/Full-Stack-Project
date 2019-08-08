@@ -3353,7 +3353,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/17'
+        to: "/venues/".concat(staples[0].id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "staples-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -3367,7 +3367,7 @@ function (_React$Component) {
       }, "Staples Center"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/18'
+        to: "/venues/".concat(oracle[0].id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "oracle-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -3381,7 +3381,7 @@ function (_React$Component) {
       }, "Oracle Arena"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/21'
+        to: "/venues/".concat(tdGarden[0].id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "td-garden-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -3395,7 +3395,7 @@ function (_React$Component) {
       }, "TD Garden"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/20'
+        to: "/venues/".concat(barclays[0].id)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "barclays-div"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
