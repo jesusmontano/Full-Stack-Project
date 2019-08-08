@@ -34,7 +34,7 @@ class TopTeams extends React.Component {
         if (this.props.teams.length === 0) {
             return (
                 <div>
-                    Loading...
+                    Loading teams...
                 </div>
             )
         }

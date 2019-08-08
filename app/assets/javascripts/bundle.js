@@ -3173,7 +3173,7 @@ function (_React$Component) {
       debugger;
 
       if (this.props.teams.length === 0) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading teams...");
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3313,10 +3313,10 @@ var TopVenues =
 function (_React$Component) {
   _inherits(TopVenues, _React$Component);
 
-  function TopVenues() {
+  function TopVenues(props) {
     _classCallCheck(this, TopVenues);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TopVenues).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(TopVenues).call(this, props));
   }
 
   _createClass(TopVenues, [{
@@ -3327,6 +3327,23 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var staples = this.props.venues.filter(function (venue) {
+        return venue.name === 'Staples Center';
+      });
+      var oracle = this.props.venues.filter(function (venue) {
+        return venue.name === 'Oracle Arena';
+      });
+      var tdGarden = this.props.venues.filter(function (venue) {
+        return venue.name === 'TD Garden';
+      });
+      var barclays = this.props.venues.filter(function (venue) {
+        return venue.name === 'Barclays Center';
+      });
+
+      if (this.props.venues.length === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading venues...");
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "top-teams-div"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -3342,7 +3359,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/17',
+        to: "/venues/".concat(staples[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3356,7 +3373,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/18',
+        to: "/venues/".concat(oracle[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3370,7 +3387,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/21',
+        to: "/venues/".concat(tdGarden[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
@@ -3384,7 +3401,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: '/venues/20',
+        to: "/venues/".concat(barclays[0].id),
         style: {
           textDecoration: 'none',
           color: 'rgb(31, 31, 31)'
