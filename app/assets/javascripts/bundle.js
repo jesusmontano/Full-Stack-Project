@@ -3184,9 +3184,15 @@ function (_React$Component) {
         className: "top-teams-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/teams/".concat(lakers[0].id),
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "lakers-div"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/teams/".concat(lakers[0].id),
@@ -3196,9 +3202,15 @@ function (_React$Component) {
         }
       }, "Lakers"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/teams/".concat(warriors[0].id),
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "warriors-div"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/teams/".concat(warriors[0].id),
@@ -3208,9 +3220,15 @@ function (_React$Component) {
         }
       }, "Warriors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/teams/".concat(celtics[0].id),
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "celtics-div"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/teams/".concat(celtics[0].id),
@@ -3220,9 +3238,15 @@ function (_React$Component) {
         }
       }, "Celtics"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "top-teams-list-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/teams/".concat(knicks[0].id),
+        style: {
+          textDecoration: 'none',
+          color: 'rgb(31, 31, 31)'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "knicks-div"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "top-teams-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/teams/".concat(knicks[0].id),

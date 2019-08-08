@@ -45,33 +45,41 @@ class TopTeams extends React.Component {
                 <label className="top-teams-label">Popular Teams</label>
                 <ul className="top-teams-list">
                     <li className="top-teams-list-item" >
-                        <div className="lakers-div">
+                        <Link to={`/teams/${lakers[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>
+                            <div className="lakers-div">
+                            </div>
+                        </Link>
 
-                        </div>
                         <p className="top-teams-text">
                             <Link to={`/teams/${lakers[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Lakers</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <div className="warriors-div">
+                        <Link to={`/teams/${warriors[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>
+                            <div className="warriors-div">
+                            </div>
+                        </Link>
 
-                        </div>
                         <p className="top-teams-text">
                             <Link to={`/teams/${warriors[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Warriors</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <div className="celtics-div">
+                        <Link to={`/teams/${celtics[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>
+                            <div className="celtics-div">
+                            </div>
+                        </Link>
 
-                        </div>
                         <p className="top-teams-text">
                             <Link to={`/teams/${celtics[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Celtics</Link>
                         </p>
                     </li>
                     <li className="top-teams-list-item">
-                        <div className="knicks-div">
+                        <Link to={`/teams/${knicks[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>
+                            <div className="knicks-div">
+                            </div>
+                        </Link>
 
-                        </div>
                         <p className="top-teams-text">
                             <Link to={`/teams/${knicks[0].id}`} style={{ textDecoration: 'none', color: 'rgb(31, 31, 31)' }}>Knicks</Link>
                         </p>
