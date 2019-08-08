@@ -612,7 +612,7 @@ function (_React$Component) {
       if (!this.props.userId) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
-        }, "You must be logged in to view the contents of this page.");
+        }, "You must be logged in to view the contents of this page. Log back in to access your account.");
       }
 
       if (this.props.tickets.length === 0) {

@@ -14,7 +14,7 @@ class Account extends React.Component {
         if (!(this.props.userId)) {
             return (
                 <label className="events-index-label">
-                    You must be logged in to view the contents of this page.
+                    You must be logged in to view the contents of this page. Log back in to access your account.
                 </label>
             )
         }
