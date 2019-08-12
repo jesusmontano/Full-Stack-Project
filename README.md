@@ -23,11 +23,11 @@ the user to log in to their account.
 * Users can find tickets to events by selecting the venue of their choice or 
 their team of choice. Alternatively, users can simply view an index of all the
 events available on SeatNerd.
+* Users can search by team to find events involving that particular team.
+* Logged-in users can choose to update the price of their ticket listing or remove the listing from the marketplace altogether.
 
 ## Future Plans
 
-* Implement search
-* Allow users to update the price of their listing
 * Allow users to bookmark events
 * Give users event recommendations based on their favorite team and current
 location
