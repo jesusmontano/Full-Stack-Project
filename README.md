@@ -39,8 +39,8 @@ events available on SeatNerd.
 
 ## Future Plans
 
-* Allow users to bookmark events
+* Allow users to bookmark events.
 * Give users event recommendations based on their favorite team and current
-location
+location.
 
 
