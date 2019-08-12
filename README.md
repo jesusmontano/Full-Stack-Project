@@ -26,9 +26,21 @@ events available on SeatNerd.
 * Users can search by team to find events involving that particular team.
 * Logged-in users can choose to update the price of their ticket listing or remove the listing from the marketplace altogether.
 
+## Screenshots
+
+### Splash Page
+![](public/splash.png)
+
+### Login Page
+![](public/login.png)
+
+### Ticket Listings
+![](public/ticket_listings.png)
+
 ## Future Plans
 
 * Allow users to bookmark events
 * Give users event recommendations based on their favorite team and current
 location
+
 
