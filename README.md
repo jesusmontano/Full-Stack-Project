@@ -29,12 +29,18 @@ events available on SeatNerd.
 ## Screenshots
 
 ### Splash Page
+The SeatNerd splash page features links to login/signup and a search bar that allows users to search for events by team.
+
 ![](public/splash.png)
 
 ### Login Page
+SeatNerd implements custom user authentication, using BCrypt for password hashing, to allow registered users to securely manage their ticket listings and make transactions. 
+
 ![](public/login.png)
 
 ### Ticket Listings
+When attempting to purchase a ticket, if a user is not logged in, the user will be prompted to login or create an account.
+
 ![](public/ticket_listings.png)
 
 ## Future Plans
