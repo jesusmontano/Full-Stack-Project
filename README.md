@@ -23,8 +23,30 @@ the user to log in to their account.
 * Users can find tickets to events by selecting the venue of their choice or 
 their team of choice. Alternatively, users can simply view an index of all the
 events available on SeatNerd.
-* Users can search by team to find events involving that particular team.
 * Logged-in users can choose to update the price of their ticket listing or remove the listing from the marketplace altogether.
+* Users can search by team to find events involving that particular team. The code snippet 
+below demonstrates how ActiveRecord's #where query method was used in order to implement
+search.
+
+```
+class Api::SearchController < ApplicationController
+
+    def search
+        @search = Team.where(
+            "name ILIKE ?",
+            "%#{params["str"]}%"
+        )
+        render json: @search
+    end
+
+
+    private
+    def search_params
+        params.require(:search).permit(:str)
+    end
+end
+
+```
 
 ## Screenshots
 
