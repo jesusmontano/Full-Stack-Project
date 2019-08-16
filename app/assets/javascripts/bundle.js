@@ -708,6 +708,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   var userId = state.session.id;
   var user = state.entities.users[userId];
@@ -740,6 +741,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchTickets: function fetchTickets() {
       return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_5__["fetchTickets"])());
+    },
+    deleteTicket: function deleteTicket(id) {
+      return dispatch(Object(_actions_ticket_actions__WEBPACK_IMPORTED_MODULE_5__["deleteTicket"])(id));
     }
   };
 };
