@@ -192,9 +192,10 @@ div {
 }
 
 footer {
-  padding-top: 20px;
+  padding-top: 25px;
   display: flex;
   justify-content: space-evenly;
+  border-top: solid 1px lightgray;
 }
 
 .login-signup-form-label {
