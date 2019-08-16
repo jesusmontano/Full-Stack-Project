@@ -44,13 +44,37 @@ const App = () => (
         <Route exact path="/ticket/editprice/:ticketId" component = {EditPriceTicketFormContainer} />
         <Route exact path="/checkout/:ticketId" component = {EditOwnerTicketFormContainer} />
         <footer>
-            <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
+            {/* <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
                 <img className="linkedin-logo" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png" alt=""/>
             </a>
             <a href="https://github.com/jesusmontano">
                 <img className="linkedin-logo" src="https://image.flaticon.com/icons/png/128/25/25231.png" alt="" />
+            </a> */}
+
+            <a href="https://www.linkedin.com/in/jesus-montano-795311138/">
+                <img className="linkedin-logo" src="https://icongr.am/simple/linkedin.svg"
+                    alt="" />
             </a>
+            <a href="https://github.com/jesusmontano">
+                <img className="linkedin-logo" src="https://icongr.am/simple/github.svg" alt="" />
+            </a>
+            <a href="https://angel.co/jesus-montano">
+                <img className="linkedin-logo" src="https://icongr.am/simple/angellist.svg" alt="" />
+            </a>
+            <a href="mailto:jesusmontano96@gmail.com">
+                <img className="linkedin-logo"
+                    src="https://icongr.am/entypo/mail.svg" alt="" />
+            </a>
+            <a href="https://jesusmontano.github.io/jesusmontano/">
+                <img className="linkedin-logo" src="https://icongr.am/entypo/home.svg" alt="" />
+            </a>
+            
         </footer>
+        <br/>
+        <div>
+            &copy; Jesus Montano 2019
+        </div>
+        <br/>
     </div>
 );
 

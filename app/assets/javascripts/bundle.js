@@ -535,15 +535,33 @@ var App = function App() {
     href: "https://www.linkedin.com/in/jesus-montano-795311138/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "linkedin-logo",
-    src: "https://cdn4.iconfinder.com/data/icons/social-media-2097/94/linkedin-128.png",
+    src: "https://icongr.am/simple/linkedin.svg",
     alt: ""
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/jesusmontano"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "linkedin-logo",
-    src: "https://image.flaticon.com/icons/png/128/25/25231.png",
+    src: "https://icongr.am/simple/github.svg",
     alt: ""
-  }))));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angel.co/jesus-montano"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "linkedin-logo",
+    src: "https://icongr.am/simple/angellist.svg",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:jesusmontano96@gmail.com"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "linkedin-logo",
+    src: "https://icongr.am/entypo/mail.svg",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://jesusmontano.github.io/jesusmontano/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "linkedin-logo",
+    src: "https://icongr.am/entypo/home.svg",
+    alt: ""
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\xA9 Jesus Montano 2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
