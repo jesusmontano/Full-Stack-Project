@@ -71,7 +71,7 @@ const App = () => (
             
         </footer>
         <br/>
-        <div>
+        <div className="copyright">
             &copy; Jesus Montano 2019
         </div>
         <br/>

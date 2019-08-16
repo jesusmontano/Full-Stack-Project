@@ -561,7 +561,9 @@ var App = function App() {
     className: "linkedin-logo",
     src: "https://icongr.am/entypo/home.svg",
     alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\xA9 Jesus Montano 2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "copyright"
+  }, "\xA9 Jesus Montano 2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);

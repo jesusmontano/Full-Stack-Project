@@ -858,3 +858,8 @@ footer {
   color: #1673e6;
   font-weight: bolder;
 }
+
+.copyright {
+  display: flex;
+  justify-content: center;
+}
