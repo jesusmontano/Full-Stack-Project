@@ -673,7 +673,8 @@ function (_React$Component) {
           key: ticket.id,
           events: _this.props.events,
           teams: _this.props.teams,
-          venues: _this.props.venues
+          venues: _this.props.venues,
+          deleteTicket: _this.props.deleteTicket
         });
       })));
     }
@@ -771,7 +772,8 @@ var AccountTicketItem = function AccountTicketItem(_ref) {
   var ticket = _ref.ticket,
       events = _ref.events,
       teams = _ref.teams,
-      venues = _ref.venues;
+      venues = _ref.venues,
+      deleteTicket = _ref.deleteTicket;
   debugger;
   var homeTeamId = events[ticket.event_id].home_team_id;
   var awayTeamId = events[ticket.event_id].away_team_id;
@@ -815,6 +817,9 @@ var AccountTicketItem = function AccountTicketItem(_ref) {
       color: 'white'
     }
   }, "Update Price"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return deleteTicket(ticket.id);
+    },
     className: "buy-button"
   }, "Remove")))));
 };

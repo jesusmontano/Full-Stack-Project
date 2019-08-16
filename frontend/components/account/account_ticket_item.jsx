@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AccountTicketItem = ({ticket, events, teams, venues}) => {
+const AccountTicketItem = ({ticket, events, teams, venues, deleteTicket}) => {
     debugger;
     const homeTeamId = events[ticket.event_id].home_team_id;
     const awayTeamId = events[ticket.event_id].away_team_id;
@@ -54,7 +54,7 @@ const AccountTicketItem = ({ticket, events, teams, venues}) => {
                         </button>
                     </div>
                     <div>
-                        <button className="buy-button">Remove</button>
+                        <button onClick={() => deleteTicket(ticket.id)} className="buy-button">Remove</button>
                     </div>
                 </div>
             </div>

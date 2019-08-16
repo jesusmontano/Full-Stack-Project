@@ -62,7 +62,7 @@ class Account extends React.Component {
                 <ul>
                     {this.props.tickets.map(ticket => (
                         <AccountTicketItem ticket={ticket} key={ticket.id}
-                        events={this.props.events} teams={this.props.teams} venues={this.props.venues}/>
+                        events={this.props.events} teams={this.props.teams} venues={this.props.venues} deleteTicket={this.props.deleteTicket}/>
                     ))}
                 </ul>
             </div>
