@@ -630,9 +630,9 @@ function (_React$Component) {
       var _this = this;
 
       if (!this.props.userId) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
-        }, "You must be logged in to view the contents of this page. Log back in to access your account.");
+        }, "You must be logged in to view the contents of this page. Log back in to access your account."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       }
 
       if (this.props.tickets.length === 0) {
