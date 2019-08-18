@@ -1068,6 +1068,10 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
+      if (!this.props.event) {
+        return null;
+      }
+
       if (Object.values(this.props.tickets).length === 0) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
           className: "events-index-label"
