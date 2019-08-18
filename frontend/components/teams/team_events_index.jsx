@@ -13,7 +13,7 @@ class TeamEventsIndex extends React.Component {
     render() {
 
         if (!this.props.team) {
-            return 'null';
+            return null;
         }
 
         if (Object.values(this.props.venues).length === 0) {

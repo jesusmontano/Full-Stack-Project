@@ -2279,7 +2279,7 @@ function (_React$Component) {
       var _this = this;
 
       if (!this.props.team) {
-        return 'null';
+        return null;
       }
 
       if (Object.values(this.props.venues).length === 0) {
