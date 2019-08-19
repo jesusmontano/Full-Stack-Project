@@ -16,6 +16,10 @@ class EventTicketsIndex extends React.Component {
             return null;
         }
 
+        if (Object.values(this.props.teams).length === 0) {
+            return null;
+        }
+
         if (Object.values(this.props.tickets).length === 0) {
             return (
                 <div>
