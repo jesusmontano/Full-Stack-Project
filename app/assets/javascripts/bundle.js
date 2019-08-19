@@ -3609,7 +3609,7 @@ function (_React$Component) {
         return null;
       }
 
-      if (!this.props.teams) {
+      if (Object.values(this.props.teams).length === 0) {
         return 'Loading teams...';
       }
 
