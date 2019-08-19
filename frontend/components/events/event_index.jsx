@@ -18,9 +18,11 @@ class EventIndex extends React.Component {
             return null;
         }
 
-        if (!this.props.teams) {
+        if (Object.values(this.props.teams).length === 0) {
             return null;
         }
+
+        debugger;
 
         return (
             <div>
