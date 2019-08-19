@@ -15,6 +15,16 @@ class VenueEventsIndex extends React.Component {
             return null;
         }
 
+        if (!this.props.teams) {
+            return 'Loading teams...'
+        }
+
+        if (!this.props.venue) {
+            return 'Loading venue...'
+        }
+
+        debugger;
+
         if (this.props.events.length === 0) {
             return (
                 <div>
