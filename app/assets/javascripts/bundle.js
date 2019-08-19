@@ -531,7 +531,7 @@ var App = function App() {
     exact: true,
     path: "/checkout/:ticketId",
     component: _tickets_edit_owner_ticket_form_container__WEBPACK_IMPORTED_MODULE_16__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/jesus-montano-795311138/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "linkedin-logo",
