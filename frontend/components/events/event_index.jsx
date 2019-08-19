@@ -13,6 +13,15 @@ class EventIndex extends React.Component {
         if (Object.values(this.props.venues).length === 0) {
             return null;
         }
+
+        if (this.props.events.length === 0) {
+            return null;
+        }
+
+        if (!this.props.teams) {
+            return null;
+        }
+
         return (
             <div>
                 <label className="events-index-label">

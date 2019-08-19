@@ -890,6 +890,14 @@ function (_React$Component) {
         return null;
       }
 
+      if (this.props.events.length === 0) {
+        return null;
+      }
+
+      if (!this.props.teams) {
+        return null;
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "events-index-label"
       }, "Upcoming Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
