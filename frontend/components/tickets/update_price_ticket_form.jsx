@@ -26,11 +26,25 @@ class UpdatePriceTicketForm extends React.Component {
     }
 
     render() {
-        const venueName = this.props.venues[this.props.ticket.venue_id].name;
-        const venue = this.props.venues[this.props.ticket.venue_id];
-        const event = this.props.events[this.props.ticket.event_id];
-        const homeTeam = this.props.teams[event.home_team_id].name;
-        const awayTeam = this.props.teams[event.away_team_id].name;
+        debugger;
+
+        if (Object.values(this.props.venues).length === 0) {
+            return null;
+        }
+
+        if (Object.values(this.props.teams).length === 0) {
+            return null;
+        }
+
+        if (Object.values(this.props.events).length === 0) {
+            return null;
+        }
+
+        let venueName = this.props.venues[this.props.ticket.venue_id].name;
+        let venue = this.props.venues[this.props.ticket.venue_id];
+        let event = this.props.events[this.props.ticket.event_id];
+        let homeTeam = this.props.teams[event.home_team_id].name;
+        let awayTeam = this.props.teams[event.away_team_id].name;
         debugger;
 
         return (

@@ -3162,6 +3162,20 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      debugger;
+
+      if (Object.values(this.props.venues).length === 0) {
+        return null;
+      }
+
+      if (Object.values(this.props.teams).length === 0) {
+        return null;
+      }
+
+      if (Object.values(this.props.events).length === 0) {
+        return null;
+      }
+
       var venueName = this.props.venues[this.props.ticket.venue_id].name;
       var venue = this.props.venues[this.props.ticket.venue_id];
       var event = this.props.events[this.props.ticket.event_id];
