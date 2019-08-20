@@ -3039,12 +3039,23 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      if (Object.values(this.props.venues).length === 0) {
+        return null;
+      }
+
+      if (Object.values(this.props.teams).length === 0) {
+        return null;
+      }
+
+      if (Object.values(this.props.events).length === 0) {
+        return null;
+      }
+
       var venueName = this.props.venues[this.props.ticket.venue_id].name;
       var venue = this.props.venues[this.props.ticket.venue_id];
       var event = this.props.events[this.props.ticket.event_id];
       var homeTeam = this.props.teams[event.home_team_id].name;
       var awayTeam = this.props.teams[event.away_team_id].name;
-      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "checkout-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
